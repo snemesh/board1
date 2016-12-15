@@ -65,3 +65,18 @@ VALUES
 	(NULL, 'Valentin Munitsa', NULL, '201611', NULL, NULL, NULL, NULL, NULL, 1),
 	(NULL, 'Yaroslav Rotar', NULL, '201611', NULL, NULL, NULL, NULL, NULL, 4),
 	(NULL, 'Yuriy  Peslyak', NULL, '201611', NULL, NULL, NULL, NULL, NULL, 54);
+	
+	…or create a new repository on the command line
+    
+    echo "# board1" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git remote add origin git@github.com:snemesh/board1.git
+    git push -u origin master
+    …or push an existing repository from the command line
+    
+    git remote add origin git@github.com:snemesh/board1.git
+    git push -u origin master
+    …or import code from another repository
+    You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
