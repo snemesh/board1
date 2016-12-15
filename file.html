@@ -1,0 +1,1522 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>JIRA</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#205081" height="30">
+        <td colspan="8">
+            <img src="https://intersog.atlassian.net/images/icon-jira-logo.png" width="57" height="30" border="0" alt="JIRA">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="8">
+            <a href="https://intersog.atlassian.net/issues/?jql=category+%3D+Service+AND+worklogDate%3E%3DstartOfMonth%28%29">JIRA</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="8">
+            Displaying <strong>61</strong> issues at <strong>21/Nov/16 7:54 PM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-project" data-id="project">
+                            Project
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-creator" data-id="creator">
+                            Creator
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                            Assignee
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Key
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_11500" data-id="customfield_11500">
+                            Non-Bilible
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeoriginalestimate" data-id="timeoriginalestimate">
+                            Original Estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimespent" data-id="aggregatetimespent">
+                            Σ Time Spent
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                            Status
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow89945" rel="89945" data-issuekey="MVP-116" class="issuerow">
+                                            <td class="project">    Ask.com.mm
+</td>
+                                            <td class="creator">            Oksana Ilchyshyn
+    </td>
+                                            <td class="assignee">            Oksana Ilchyshyn
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MVP-116" href="https://intersog.atlassian.net/browse/MVP-116">MVP-116</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">21600</td>
+                                            <td class="aggregatetimespent">25200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;In Progress&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This issue is being actively worked on at the moment by the assignee.&lt;/span&gt;">In Progress</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89431" rel="89431" data-issuekey="MVP-114" class="issuerow">
+                                            <td class="project">    Ask.com.mm
+</td>
+                                            <td class="creator">            Oksana Ilchyshyn
+    </td>
+                                            <td class="assignee">            Oksana Ilchyshyn
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MVP-114" href="https://intersog.atlassian.net/browse/MVP-114">MVP-114</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="aggregatetimespent">7200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89430" rel="89430" data-issuekey="MVP-113" class="issuerow">
+                                            <td class="project">    Ask.com.mm
+</td>
+                                            <td class="creator">            Oksana Ilchyshyn
+    </td>
+                                            <td class="assignee">            Bogdan Kozhushko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MVP-113" href="https://intersog.atlassian.net/browse/MVP-113">MVP-113</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">7200</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89234" rel="89234" data-issuekey="MVP-98" class="issuerow">
+                                            <td class="project">    Ask.com.mm
+</td>
+                                            <td class="creator">            Oksana Ilchyshyn
+    </td>
+                                            <td class="assignee">            Oleksiy Vus
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MVP-98" href="https://intersog.atlassian.net/browse/MVP-98">MVP-98</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">126000</td>
+                                            <td class="aggregatetimespent">144000</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;In Progress&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This issue is being actively worked on at the moment by the assignee.&lt;/span&gt;">In Progress</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89226" rel="89226" data-issuekey="MVP-90" class="issuerow">
+                                            <td class="project">    Ask.com.mm
+</td>
+                                            <td class="creator">            Oksana Ilchyshyn
+    </td>
+                                            <td class="assignee">            Oksana Ilchyshyn
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MVP-90" href="https://intersog.atlassian.net/browse/MVP-90">MVP-90</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">82800</td>
+                                            <td class="aggregatetimespent">51588</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;In Progress&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This issue is being actively worked on at the moment by the assignee.&lt;/span&gt;">In Progress</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89225" rel="89225" data-issuekey="MVP-89" class="issuerow">
+                                            <td class="project">    Ask.com.mm
+</td>
+                                            <td class="creator">            Oksana Ilchyshyn
+    </td>
+                                            <td class="assignee">            Oksana Ilchyshyn
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MVP-89" href="https://intersog.atlassian.net/browse/MVP-89">MVP-89</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">162000</td>
+                                            <td class="aggregatetimespent">66600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Canceled / On Pause&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">Canceled / On Pause</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89224" rel="89224" data-issuekey="MVP-88" class="issuerow">
+                                            <td class="project">    Ask.com.mm
+</td>
+                                            <td class="creator">            Oksana Ilchyshyn
+    </td>
+                                            <td class="assignee">            Oksana Ilchyshyn
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MVP-88" href="https://intersog.atlassian.net/browse/MVP-88">MVP-88</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">144000</td>
+                                            <td class="aggregatetimespent">49200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;In Progress&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This issue is being actively worked on at the moment by the assignee.&lt;/span&gt;">In Progress</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89223" rel="89223" data-issuekey="MVP-87" class="issuerow">
+                                            <td class="project">    Ask.com.mm
+</td>
+                                            <td class="creator">            Oksana Ilchyshyn
+    </td>
+                                            <td class="assignee">            Oksana Ilchyshyn
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MVP-87" href="https://intersog.atlassian.net/browse/MVP-87">MVP-87</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">10800</td>
+                                            <td class="aggregatetimespent">25200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Canceled / On Pause&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">Canceled / On Pause</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow88806" rel="88806" data-issuekey="MVP-73" class="issuerow">
+                                            <td class="project">    Ask.com.mm
+</td>
+                                            <td class="creator">            Oksana Ilchyshyn
+    </td>
+                                            <td class="assignee">            Oksana Ilchyshyn
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="MVP-73" href="https://intersog.atlassian.net/browse/MVP-73">MVP-73</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">723600</td>
+                                            <td class="aggregatetimespent">143400</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;In Progress&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This issue is being actively worked on at the moment by the assignee.&lt;/span&gt;">In Progress</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89846" rel="89846" data-issuekey="HEAT-346" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-346" href="https://intersog.atlassian.net/browse/HEAT-346">HEAT-346</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89818" rel="89818" data-issuekey="HEAT-344" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Yaroslav Rotar
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-344" href="https://intersog.atlassian.net/browse/HEAT-344">HEAT-344</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">72000</td>
+                                            <td class="aggregatetimespent">7200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89817" rel="89817" data-issuekey="HEAT-343" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-343" href="https://intersog.atlassian.net/browse/HEAT-343">HEAT-343</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">7200</td>
+                                            <td class="aggregatetimespent">7200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89816" rel="89816" data-issuekey="HEAT-342" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-342" href="https://intersog.atlassian.net/browse/HEAT-342">HEAT-342</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">1800</td>
+                                            <td class="aggregatetimespent">1800</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89815" rel="89815" data-issuekey="HEAT-341" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-341" href="https://intersog.atlassian.net/browse/HEAT-341">HEAT-341</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">1800</td>
+                                            <td class="aggregatetimespent">1800</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89814" rel="89814" data-issuekey="HEAT-340" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-340" href="https://intersog.atlassian.net/browse/HEAT-340">HEAT-340</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">1800</td>
+                                            <td class="aggregatetimespent">1800</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89813" rel="89813" data-issuekey="HEAT-339" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-339" href="https://intersog.atlassian.net/browse/HEAT-339">HEAT-339</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89812" rel="89812" data-issuekey="HEAT-338" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-338" href="https://intersog.atlassian.net/browse/HEAT-338">HEAT-338</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">7200</td>
+                                            <td class="aggregatetimespent">7200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89811" rel="89811" data-issuekey="HEAT-337" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-337" href="https://intersog.atlassian.net/browse/HEAT-337">HEAT-337</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">1800</td>
+                                            <td class="aggregatetimespent">1800</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89810" rel="89810" data-issuekey="HEAT-336" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-336" href="https://intersog.atlassian.net/browse/HEAT-336">HEAT-336</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">7200</td>
+                                            <td class="aggregatetimespent">7200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89809" rel="89809" data-issuekey="HEAT-335" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-335" href="https://intersog.atlassian.net/browse/HEAT-335">HEAT-335</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">21600</td>
+                                            <td class="aggregatetimespent">21600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89808" rel="89808" data-issuekey="HEAT-334" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Stanislav Reznichenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-334" href="https://intersog.atlassian.net/browse/HEAT-334">HEAT-334</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">7200</td>
+                                            <td class="aggregatetimespent">7200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89807" rel="89807" data-issuekey="HEAT-333" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-333" href="https://intersog.atlassian.net/browse/HEAT-333">HEAT-333</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">1800</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89806" rel="89806" data-issuekey="HEAT-332" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Stanislav Reznichenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-332" href="https://intersog.atlassian.net/browse/HEAT-332">HEAT-332</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">1800</td>
+                                            <td class="aggregatetimespent">1800</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89805" rel="89805" data-issuekey="HEAT-331" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Stanislav Reznichenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-331" href="https://intersog.atlassian.net/browse/HEAT-331">HEAT-331</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89804" rel="89804" data-issuekey="HEAT-330" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Stanislav Reznichenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-330" href="https://intersog.atlassian.net/browse/HEAT-330">HEAT-330</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89803" rel="89803" data-issuekey="HEAT-329" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-329" href="https://intersog.atlassian.net/browse/HEAT-329">HEAT-329</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">14400</td>
+                                            <td class="aggregatetimespent">19800</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89802" rel="89802" data-issuekey="HEAT-328" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Stanislav Reznichenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-328" href="https://intersog.atlassian.net/browse/HEAT-328">HEAT-328</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">10800</td>
+                                            <td class="aggregatetimespent">10800</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89801" rel="89801" data-issuekey="HEAT-327" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Yaroslav Rotar
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-327" href="https://intersog.atlassian.net/browse/HEAT-327">HEAT-327</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">7200</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89355" rel="89355" data-issuekey="HEAT-325" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-325" href="https://intersog.atlassian.net/browse/HEAT-325">HEAT-325</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">14400</td>
+                                            <td class="aggregatetimespent">13500</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89354" rel="89354" data-issuekey="HEAT-324" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-324" href="https://intersog.atlassian.net/browse/HEAT-324">HEAT-324</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">14400</td>
+                                            <td class="aggregatetimespent">14400</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89353" rel="89353" data-issuekey="HEAT-323" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-323" href="https://intersog.atlassian.net/browse/HEAT-323">HEAT-323</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">2700</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89352" rel="89352" data-issuekey="HEAT-322" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-322" href="https://intersog.atlassian.net/browse/HEAT-322">HEAT-322</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">7200</td>
+                                            <td class="aggregatetimespent">7200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89304" rel="89304" data-issuekey="HEAT-321" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-321" href="https://intersog.atlassian.net/browse/HEAT-321">HEAT-321</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">10800</td>
+                                            <td class="aggregatetimespent">10800</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89216" rel="89216" data-issuekey="HEAT-320" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-320" href="https://intersog.atlassian.net/browse/HEAT-320">HEAT-320</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">1200</td>
+                                            <td class="aggregatetimespent">1200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89215" rel="89215" data-issuekey="HEAT-319" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-319" href="https://intersog.atlassian.net/browse/HEAT-319">HEAT-319</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89214" rel="89214" data-issuekey="HEAT-318" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-318" href="https://intersog.atlassian.net/browse/HEAT-318">HEAT-318</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">6000</td>
+                                            <td class="aggregatetimespent">6000</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89213" rel="89213" data-issuekey="HEAT-317" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-317" href="https://intersog.atlassian.net/browse/HEAT-317">HEAT-317</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89212" rel="89212" data-issuekey="HEAT-316" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-316" href="https://intersog.atlassian.net/browse/HEAT-316">HEAT-316</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89210" rel="89210" data-issuekey="HEAT-315" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-315" href="https://intersog.atlassian.net/browse/HEAT-315">HEAT-315</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">5400</td>
+                                            <td class="aggregatetimespent">5400</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89209" rel="89209" data-issuekey="HEAT-314" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-314" href="https://intersog.atlassian.net/browse/HEAT-314">HEAT-314</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">21600</td>
+                                            <td class="aggregatetimespent">21600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89208" rel="89208" data-issuekey="HEAT-313" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-313" href="https://intersog.atlassian.net/browse/HEAT-313">HEAT-313</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89207" rel="89207" data-issuekey="HEAT-312" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-312" href="https://intersog.atlassian.net/browse/HEAT-312">HEAT-312</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89206" rel="89206" data-issuekey="HEAT-311" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-311" href="https://intersog.atlassian.net/browse/HEAT-311">HEAT-311</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;QA Review&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This status is managed internally by JIRA Software&lt;/span&gt;">QA Review</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow85757" rel="85757" data-issuekey="HEAT-179" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Sergey Nemesh
+    </td>
+                                            <td class="assignee">            Sergey Nemesh
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-179" href="https://intersog.atlassian.net/browse/HEAT-179">HEAT-179</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">180000</td>
+                                            <td class="aggregatetimespent">93600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow85440" rel="85440" data-issuekey="HEAT-147" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Polina Karpenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-147" href="https://intersog.atlassian.net/browse/HEAT-147">HEAT-147</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">352800</td>
+                                            <td class="aggregatetimespent">556440</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow84125" rel="84125" data-issuekey="HEAT-133" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Polina Karpenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-133" href="https://intersog.atlassian.net/browse/HEAT-133">HEAT-133</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">28800</td>
+                                            <td class="aggregatetimespent">40620</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;On hold&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;On hold&lt;/span&gt;">On hold</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow83946" rel="83946" data-issuekey="HEAT-108" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Polina Karpenko
+    </td>
+                                            <td class="assignee">            Igor Rolinskiy
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-108" href="https://intersog.atlassian.net/browse/HEAT-108">HEAT-108</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">36000</td>
+                                            <td class="aggregatetimespent">6300</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;On hold&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;On hold&lt;/span&gt;">On hold</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow81155" rel="81155" data-issuekey="HEAT-67" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Igor Kravchenko
+    </td>
+                                            <td class="assignee">            Polina Karpenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-67" href="https://intersog.atlassian.net/browse/HEAT-67">HEAT-67</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">0</td>
+                                            <td class="aggregatetimespent">133200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;On hold&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;On hold&lt;/span&gt;">On hold</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow81038" rel="81038" data-issuekey="HEAT-65" class="issuerow">
+                                            <td class="project">    HealthLife - GLAMCOM LP
+</td>
+                                            <td class="creator">            Igor Kravchenko
+    </td>
+                                            <td class="assignee">            Polina Karpenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HEAT-65" href="https://intersog.atlassian.net/browse/HEAT-65">HEAT-65</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">946800</td>
+                                            <td class="aggregatetimespent">835200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89656" rel="89656" data-issuekey="DPI-38" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-38" href="https://intersog.atlassian.net/browse/DPI-38">DPI-38</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="aggregatetimespent">14400</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;">Backlog</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89512" rel="89512" data-issuekey="DPI-36" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Artur Mkrtychian
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-36" href="https://intersog.atlassian.net/browse/DPI-36">DPI-36</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;On hold&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;On hold&lt;/span&gt;">On hold</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89505" rel="89505" data-issuekey="DPI-35" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-35" href="https://intersog.atlassian.net/browse/DPI-35">DPI-35</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="aggregatetimespent">7200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89504" rel="89504" data-issuekey="DPI-34" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-34" href="https://intersog.atlassian.net/browse/DPI-34">DPI-34</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89433" rel="89433" data-issuekey="DPI-33" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-33" href="https://intersog.atlassian.net/browse/DPI-33">DPI-33</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="aggregatetimespent">9000</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89343" rel="89343" data-issuekey="DPI-32" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-32" href="https://intersog.atlassian.net/browse/DPI-32">DPI-32</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="aggregatetimespent">7200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89303" rel="89303" data-issuekey="DPI-31" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-31" href="https://intersog.atlassian.net/browse/DPI-31">DPI-31</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="aggregatetimespent">7200</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;On hold&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;On hold&lt;/span&gt;">On hold</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89302" rel="89302" data-issuekey="DPI-30" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-30" href="https://intersog.atlassian.net/browse/DPI-30">DPI-30</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89301" rel="89301" data-issuekey="DPI-29" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-29" href="https://intersog.atlassian.net/browse/DPI-29">DPI-29</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="aggregatetimespent">10800</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89026" rel="89026" data-issuekey="DPI-27" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Alexandr Borshchenko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-27" href="https://intersog.atlassian.net/browse/DPI-27">DPI-27</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">3600</td>
+                                            <td class="aggregatetimespent">3600</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow89017" rel="89017" data-issuekey="DPI-25" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Artur Mkrtychian
+    </td>
+                                            <td class="assignee">            Ivan Prikhodko
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-25" href="https://intersog.atlassian.net/browse/DPI-25">DPI-25</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+</td>
+                                            <td class="timeoriginalestimate">28800</td>
+                                            <td class="aggregatetimespent">10800</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;In Progress&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;This issue is being actively worked on at the moment by the assignee.&lt;/span&gt;">In Progress</span>    </td>
+                    </tr>
+
+
+                <tr id="issuerow85562" rel="85562" data-issuekey="DPI-14" class="issuerow">
+                                            <td class="project">    Dohyo Phase II
+</td>
+                                            <td class="creator">            Yuriy  Peslyak
+    </td>
+                                            <td class="assignee">            Artur Mkrtychian
+    </td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DPI-14" href="https://intersog.atlassian.net/browse/DPI-14">DPI-14</a>
+</td>
+                                            <td class="customfield_11500">
+
+
+    <div class="shorten" id="customfield_11500-field">
+        							<span>Yes</span>			            </div>
+</td>
+                                            <td class="timeoriginalestimate">39600</td>
+                                            <td class="aggregatetimespent">198000</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;">Backlog</span>    </td>
+                    </tr>
+                </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="8"><font size="1">
+        Generated at Mon Nov 21 19:54:38 EET 2016 by Sergey Nemesh using JIRA 1000.552.6#100018-sha1:e2f2197b6871d3361a4e256e981b8b6c4e00960b.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>

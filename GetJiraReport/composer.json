@@ -1,0 +1,14 @@
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/Youpie/simple-html-dom"
+    }
+  ],
+  "require": {
+    "php":">=5.3.0",
+    "sunra/php-simple-html-dom-parser": "1.5.1",
+    "simple-html-dom/simple-html-dom": "*"
+  }
+
+}
