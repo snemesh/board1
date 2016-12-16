@@ -169,5 +169,63 @@ CREATE TABLE `myprojecttmp`
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
+-- ---------------------------------------------------------------------
+-- myanalitic
+-- ---------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `myanalitic`;
+
+CREATE TABLE `myanalitic`
+(
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `projectname` VARCHAR(128),
+    `issuekey` VARCHAR(128),
+    `initialestimate` VARCHAR(128),
+    `nonbil` VARCHAR(24),
+    `assignee` VARCHAR(128),
+    `estimatedhourssum` DOUBLE,
+    `logworkhourssum` DOUBLE,
+    `logworkusername` VARCHAR(128),
+    `logworkyear` INTEGER,
+    `logworkmonth` INTEGER,
+    `logworkdatatime` INTEGER,
+    `logworkage` INTEGER,
+    `countissues` INTEGER,
+    `countissuespersent` DOUBLE,
+    `estimatedhourssubtask` DOUBLE,
+    `logedhours` DOUBLE,
+    `remaininghours` DOUBLE,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
+-- ---------------------------------------------------------------------
+-- myanaliticnonbill
+-- ---------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `myanaliticnonbill`;
+
+CREATE TABLE `myanaliticnonbill`
+(
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `projectname` VARCHAR(128),
+    `issuekey` VARCHAR(128),
+    `initialestimate` VARCHAR(128),
+    `nonbil` VARCHAR(24),
+    `assignee` VARCHAR(128),
+    `estimatedhourssum` DOUBLE,
+    `logworkhourssum` DOUBLE,
+    `logworkusername` VARCHAR(128),
+    `logworkyear` INTEGER,
+    `logworkmonth` INTEGER,
+    `logworkdatatime` INTEGER,
+    `logworkage` INTEGER,
+    `countissues` INTEGER,
+    `countissuespersent` DOUBLE,
+    `estimatedhourssubtask` DOUBLE,
+    `logedhours` DOUBLE,
+    `remaininghours` DOUBLE,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
 # This restores the fkey checks, after having unset them earlier
 SET FOREIGN_KEY_CHECKS = 1;

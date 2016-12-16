@@ -7,7 +7,7 @@ return [
                 'kpidata' => [
                     'adapter'    => 'mysql',
                     'classname'  => 'Propel\Runtime\Connection\ConnectionWrapper',
-                    'dsn'        => 'mysql:host=127.0.0.1;dbname=data',
+                    'dsn'        => 'mysql:host=board.intersog.com;dbname=data',
                     'user'       => 'root',
                     'password'   => 'system021080',
                     'attributes' => []

@@ -94,4 +94,44 @@
         <column name="totalcostspent" type="double" required="false" phpName="TotalCostSpent"/>
         <column name="totalcost" type="double" required="false" phpName="TotalCost"/>
     </table>
+    <table name="myanalitic" phpName="myAnalitic">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="projectname" type="varchar" size="128" required="false" phpName="ProjectName" />
+        <column name="issuekey" type="varchar" size="128" required="false" phpName="IssueKey" />
+        <column name="initialestimate" type="varchar" size="128" required="false" phpName="InitialEstimate" />
+        <column name="nonbil" type="varchar" size="24" required="false" phpName="NonBil"/>
+        <column name="assignee" type="varchar" size="128" required="false" phpName="Assignee"/>
+        <column name="estimatedhourssum" type="double" required="false" phpName="EstimatedHoursSum"/>
+        <column name="logworkhourssum" type="double" required="false" phpName="LogWorkHoursSum"/>
+        <column name="logworkusername" type="varchar" size="128" required="false" phpName="LogWorkUserName"/>
+        <column name="logworkyear" type="integer" required="false" phpName="LogWorkYear"/>
+        <column name="logworkmonth" type="integer" required="false" phpName="LogWorkMonth"/>
+        <column name="logworkdatatime" type="integer" required="false" phpName="LogWorkDataTime"/>
+        <column name="logworkage" type="integer" required="false" phpName="LogWorkAge"/>
+        <column name="countissues" type="integer" required="false" phpName="CountIssues"/>
+        <column name="countissuespersent" type="double" required="false" phpName="CountIssuesPersent"/>
+        <column name="estimatedhourssubtask" type="double" required="false" phpName="EstimatedHoursSubTask"/>
+        <column name="logedhours" type="double" required="false" phpName="LogedHours"/>
+        <column name="remaininghours" type="double" required="false" phpName="RemainingHours"/>
+    </table>
+    <table name="myanaliticnonbill" phpName="myAnaliticNonBill">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="projectname" type="varchar" size="128" required="false" phpName="ProjectName" />
+        <column name="issuekey" type="varchar" size="128" required="false" phpName="IssueKey" />
+        <column name="initialestimate" type="varchar" size="128" required="false" phpName="InitialEstimate" />
+        <column name="nonbil" type="varchar" size="24" required="false" phpName="NonBil"/>
+        <column name="assignee" type="varchar" size="128" required="false" phpName="Assignee"/>
+        <column name="estimatedhourssum" type="double" required="false" phpName="EstimatedHoursSum"/>
+        <column name="logworkhourssum" type="double" required="false" phpName="LogWorkHoursSum"/>
+        <column name="logworkusername" type="varchar" size="128" required="false" phpName="LogWorkUserName"/>
+        <column name="logworkyear" type="integer" required="false" phpName="LogWorkYear"/>
+        <column name="logworkmonth" type="integer" required="false" phpName="LogWorkMonth"/>
+        <column name="logworkdatatime" type="integer" required="false" phpName="LogWorkDataTime"/>
+        <column name="logworkage" type="integer" required="false" phpName="LogWorkAge"/>
+        <column name="countissues" type="integer" required="false" phpName="CountIssues"/>
+        <column name="countissuespersent" type="double" required="false" phpName="CountIssuesPersent"/>
+        <column name="estimatedhourssubtask" type="double" required="false" phpName="EstimatedHoursSubTask"/>
+        <column name="logedhours" type="double" required="false" phpName="LogedHours"/>
+        <column name="remaininghours" type="double" required="false" phpName="RemainingHours"/>
+    </table>
 </database>

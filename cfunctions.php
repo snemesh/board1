@@ -59,7 +59,6 @@ function getYearMonth($str){
 
     return intval($mix);
 }
-
 function getYear($str){
     if ($str=="-") return 0;
     $step1 = explode(" ",$str);
@@ -144,7 +143,6 @@ function showDataInTable() //получить список данных из т�
 
     }
 }
-
 function showDataForUsersTable() //получить список данных из таблички DataStore и вывести их ввиде таблтчки
 {
     $myDebugSys = new PHPDebug();
@@ -172,7 +170,6 @@ function showDataForUsersTable() //получить список данных и
 
     }
 }
-
 function showEmployeeTable($someDate) //получить список данных из таблички DataStore и вывести их ввиде таблтчки
 {
     //$someDate=date('Ym');
@@ -214,8 +211,6 @@ function showEmployeeTable($someDate) //получить список данны
 
     }
 }
-
-
 function logOutBack($someUser) //вылогинить пользователя из системы
 {
     try {
@@ -315,7 +310,6 @@ function getAssigneesFromRepor()
     }
     return $data;
 }
-
 function GetAssigneeFromReport(){
     $data = getAssigneesFromRepor();
     $count=0;
@@ -333,7 +327,6 @@ function GetAssigneeFromReport(){
     }
     return $assignee;
 }
-
 function GetUserSpentFromReport(){
     $myDebugSys = new PHPDebug();
     $myDebugSys->debug("Start function getUserSpentFromReport");
@@ -508,8 +501,6 @@ function GetJiraReport()
     return $dataJ;
 }
 
-
-
 function ProjectAnalise(){
     $myDebugSys = new PHPDebug();
     $myDebugSys->debug("Start get Projects");
@@ -609,9 +600,12 @@ function getSpentMoneyByProject($someProject){
         ->select(array("userspent","sumSpent"))
         ->groupByUserSpent()
         ->find()->toArray();
+    print_r($userHowSpent);
     foreach ($userHowSpent as $val){ // ищем рейт пользователя, который работал над проектом
         $userRate = findUserSpentInTable($val["userspent"]); //находим его в таблице пользователей
+        echo $val["userspent"]."<br>";
         if(empty($userRate)) { // если не нашли - присваем его рейту - 0
+            //echo "user rate is empty";
             $userRate[0]["salary"]=0;           //присваеваем salary 0
             $userRate[0]["hourlyRate"]=0;       //присваемваем hourlyRate 0
 
@@ -621,6 +615,7 @@ function getSpentMoneyByProject($someProject){
         $projectCost[$count]["costMoney"]=$userRate[0]["hourlyRate"]*$val["sumSpent"];
         $count++;
     }
+    print_r($projectCost);
     $records =  count($projectCost);    //считаем количество записей в масиве с данными о спенте и деньгах
     $totalSpent=0;                      //создаем пустые переменные для хранения результата Spent
     $totalMoney=0;                      //создаем пустые переменные для хранения результата Mpney
@@ -714,6 +709,122 @@ function GetEmployeeFromReport(){
         }
         $myDebugSys->debug("The process of loading data to the myEmployee was finished");
     }
+}
+
+function loadAnaliticReport() //загружаем данные из отчета Jira в базу данный mySQL
+{
+    $myDebugSys = new PHPDebug();
+    $myDebugSys->debug("Start process of loading data to the base<br>");
+    $anyData = myAnaliticQuery::create()->find();
+    if($anyData!=""){
+        $myDebugSys->debug("We already have data in the table myDataStore");
+        $anyData->delete();
+        $myDebugSys->debug("The table myDataStore was deleted");
+    }
+    $myDataStore = new myAnalitic();
+    $myData = getDataFromReport('http://localhost:3000/lrqli2dn35q');
+    if($myData==""){
+        echo "Probably we havn't data from the report - http://localhost:3000/lrv0ve06e3f, Please check";
+        $myData = getDataFromReport('http://localhost:3000/lrqli2dn35q');
+    }
+    foreach ($myData as $index => $col)
+    {
+//        $project = $col[0];
+//        echo($col[1])."  ";
+//        echo($col[2])."  ";
+//        echo($col[3])."  ";
+//        echo($col[4])."  ";
+//        echo($col[5])."  ";
+//        echo($col[6])."  ";
+//        echo($col[7])."  ";
+//        echo($col[8])."  ";
+//        echo($col[9])."  ";
+//        echo($col[10])."  ";
+//        echo($col[11])."  ";
+//        echo($col[12])."  ";
+//        echo($col[13])."  ";
+//        echo($col[14])."  ";
+//        echo($col[15])."  ";
+//        echo($col[16])."<br>";
+        $myDataStore->setProjectName($col[0]);
+        $myDataStore->setIssueKey($col[1]);
+        $myDataStore->setInitialEstimate($col[2]);
+        $myDataStore->setNonBil($col[3]);
+        $myDataStore->setAssignee($col[4]);
+        $myDataStore->setEstimatedHoursSum($col[5]);
+        $myDataStore->setLogWorkHoursSum($col[6]);
+        $myDataStore->setLogWorkUserName($col[7]);
+        $myDataStore->setLogWorkYear($col[8]);
+        $myDataStore->setLogWorkMonth($col[9]);
+        $myDataStore->setLogWorkDataTime($col[10]);
+        $myDataStore->setLogWorkAge($col[11]);
+        $myDataStore->setCountIssues($col[12]);
+        $myDataStore->setCountIssuesPersent($col[13]);
+        $myDataStore->setEstimatedHoursSubTask($col[14]);
+        $myDataStore->setLogedHours($col[15]);
+        $myDataStore->setRemainingHours($col[16]);
+        $myDataStore->save();
+        $myDataStore->clear();
+    }
+    $myDebugSys->debug("The process of loading data to the base was finished");
+}
+
+function loadAnaliticNonBillReport() //загружаем данные из отчета Jira в базу данный mySQL
+{
+    $myDebugSys = new PHPDebug();
+    $myDebugSys->debug("Start process of loading data to the base<br>");
+    $anyData = myAnaliticNonBillQuery::create()->find();
+    if($anyData!=""){
+        $myDebugSys->debug("We already have data in the table myDataStore");
+        $anyData->delete();
+        $myDebugSys->debug("The table myDataStore was deleted");
+    }
+    $myDataStore = new myAnaliticNonBill();
+    $myData = getDataFromReport('http://localhost:3000/ma7045tsj19');
+    if($myData==""){
+        echo "Probably we havn't data from the report - http://localhost:3000/lrv0ve06e3f, Please check";
+        $myData = getDataFromReport('http://localhost:3000/ma7045tsj19');
+    }
+    foreach ($myData as $index => $col)
+    {
+//        $project = $col[0];
+//        echo($col[1])."  ";
+//        echo($col[2])."  ";
+//        echo($col[3])."  ";
+//        echo($col[4])."  ";
+//        echo($col[5])."  ";
+//        echo($col[6])."  ";
+//        echo($col[7])."  ";
+//        echo($col[8])."  ";
+//        echo($col[9])."  ";
+//        echo($col[10])."  ";
+//        echo($col[11])."  ";
+//        echo($col[12])."  ";
+//        echo($col[13])."  ";
+//        echo($col[14])."  ";
+//        echo($col[15])."  ";
+//        echo($col[16])."<br>";
+        $myDataStore->setProjectName($col[0]);
+        $myDataStore->setIssueKey($col[1]);
+        $myDataStore->setInitialEstimate($col[2]);
+        $myDataStore->setNonBil($col[3]);
+        $myDataStore->setAssignee($col[4]);
+        $myDataStore->setEstimatedHoursSum($col[5]);
+        $myDataStore->setLogWorkHoursSum($col[6]);
+        $myDataStore->setLogWorkUserName($col[7]);
+        $myDataStore->setLogWorkYear($col[8]);
+        $myDataStore->setLogWorkMonth($col[9]);
+        $myDataStore->setLogWorkDataTime($col[10]);
+        $myDataStore->setLogWorkAge($col[11]);
+        $myDataStore->setCountIssues($col[12]);
+        $myDataStore->setCountIssuesPersent($col[13]);
+        $myDataStore->setEstimatedHoursSubTask($col[14]);
+        $myDataStore->setLogedHours($col[15]);
+        $myDataStore->setRemainingHours($col[16]);
+        $myDataStore->save();
+        $myDataStore->clear();
+    }
+    $myDebugSys->debug("The process of loading data to the base was finished");
 }
 
 

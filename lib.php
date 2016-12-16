@@ -137,5 +137,5 @@ function ProjectResults(){
     }
 
 }
-//PrepareTmpDataTable();
-//ProjectResults();
+PrepareTmpDataTable();
+ProjectResults();

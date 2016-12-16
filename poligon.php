@@ -10,19 +10,16 @@ error_reporting(E_ALL);
 require "cfunctions.php";
 
 //echo date('M-Y');
-loadBigReport();
-
+//loadBigReport(); // загружаем myDate Store в базу
+//loadAnaliticReport();
+loadAnaliticNonBillReport();
 //
 
-GetEmployeeFromReport();
+
+//GetEmployeeFromReport();
 //GetUserSpentFromReport();
 //
 //ProjectAnalise();
 //
 //showDataForUsersTable();
 //
-//$result = getSpentMoneyByProject('MCC');
-//echo $result["totalMoney"];
-//findUserSpentInTable("Oleg Timoshenko");
-
-//PrepareTmpDataTable();

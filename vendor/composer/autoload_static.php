@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit698128ddc1eda313fe01a214ad030d60
+class ComposerStaticInit847619912dcbf363b6f227eb2383ceba
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -197,6 +197,10 @@ class ComposerStaticInit698128ddc1eda313fe01a214ad030d60
     public static $classMap = array (
         'Base\\ProjectAnsAssignee' => __DIR__ . '/../..' . '/generated-classes/Base/ProjectAnsAssignee.php',
         'Base\\ProjectAnsAssigneeQuery' => __DIR__ . '/../..' . '/generated-classes/Base/ProjectAnsAssigneeQuery.php',
+        'Base\\myAnalitic' => __DIR__ . '/../..' . '/generated-classes/Base/myAnalitic.php',
+        'Base\\myAnaliticNonBill' => __DIR__ . '/../..' . '/generated-classes/Base/myAnaliticNonBill.php',
+        'Base\\myAnaliticNonBillQuery' => __DIR__ . '/../..' . '/generated-classes/Base/myAnaliticNonBillQuery.php',
+        'Base\\myAnaliticQuery' => __DIR__ . '/../..' . '/generated-classes/Base/myAnaliticQuery.php',
         'Base\\myAssignee' => __DIR__ . '/../..' . '/generated-classes/Base/myAssignee.php',
         'Base\\myAssigneeQuery' => __DIR__ . '/../..' . '/generated-classes/Base/myAssigneeQuery.php',
         'Base\\myDataStore' => __DIR__ . '/../..' . '/generated-classes/Base/myDataStore.php',
@@ -247,6 +251,8 @@ class ComposerStaticInit698128ddc1eda313fe01a214ad030d60
         'JakubOnderka\\PhpParallelLint\\TextOutputColored' => __DIR__ . '/..' . '/jakub-onderka/php-parallel-lint/src/Output.php',
         'JsonSerializable' => __DIR__ . '/..' . '/jakub-onderka/php-parallel-lint/src/JsonSerializable.php',
         'Map\\ProjectAnsAssigneeTableMap' => __DIR__ . '/../..' . '/generated-classes/Map/ProjectAnsAssigneeTableMap.php',
+        'Map\\myAnaliticNonBillTableMap' => __DIR__ . '/../..' . '/generated-classes/Map/myAnaliticNonBillTableMap.php',
+        'Map\\myAnaliticTableMap' => __DIR__ . '/../..' . '/generated-classes/Map/myAnaliticTableMap.php',
         'Map\\myAssigneeTableMap' => __DIR__ . '/../..' . '/generated-classes/Map/myAssigneeTableMap.php',
         'Map\\myDataStoreTableMap' => __DIR__ . '/../..' . '/generated-classes/Map/myDataStoreTableMap.php',
         'Map\\myDataTempTableMap' => __DIR__ . '/../..' . '/generated-classes/Map/myDataTempTableMap.php',
@@ -690,6 +696,10 @@ class ComposerStaticInit698128ddc1eda313fe01a214ad030d60
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'myAnalitic' => __DIR__ . '/../..' . '/generated-classes/myAnalitic.php',
+        'myAnaliticNonBill' => __DIR__ . '/../..' . '/generated-classes/myAnaliticNonBill.php',
+        'myAnaliticNonBillQuery' => __DIR__ . '/../..' . '/generated-classes/myAnaliticNonBillQuery.php',
+        'myAnaliticQuery' => __DIR__ . '/../..' . '/generated-classes/myAnaliticQuery.php',
         'myAssignee' => __DIR__ . '/../..' . '/generated-classes/myAssignee.php',
         'myAssigneeQuery' => __DIR__ . '/../..' . '/generated-classes/myAssigneeQuery.php',
         'myDataStore' => __DIR__ . '/../..' . '/generated-classes/myDataStore.php',
@@ -709,10 +719,10 @@ class ComposerStaticInit698128ddc1eda313fe01a214ad030d60
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit698128ddc1eda313fe01a214ad030d60::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit698128ddc1eda313fe01a214ad030d60::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit698128ddc1eda313fe01a214ad030d60::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit698128ddc1eda313fe01a214ad030d60::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit847619912dcbf363b6f227eb2383ceba::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit847619912dcbf363b6f227eb2383ceba::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit847619912dcbf363b6f227eb2383ceba::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit847619912dcbf363b6f227eb2383ceba::$classMap;
 
         }, null, ClassLoader::class);
     }
