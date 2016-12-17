@@ -102,12 +102,12 @@
         <column name="nonbil" type="varchar" size="24" required="false" phpName="NonBil"/>
         <column name="assignee" type="varchar" size="128" required="false" phpName="Assignee"/>
         <column name="estimatedhourssum" type="double" required="false" phpName="EstimatedHoursSum"/>
-        <column name="logworkhourssum" type="double" required="false" phpName="LogWorkHoursSum"/>
-        <column name="logworkusername" type="varchar" size="128" required="false" phpName="LogWorkUserName"/>
-        <column name="logworkyear" type="integer" required="false" phpName="LogWorkYear"/>
-        <column name="logworkmonth" type="integer" required="false" phpName="LogWorkMonth"/>
-        <column name="logworkdatatime" type="integer" required="false" phpName="LogWorkDataTime"/>
-        <column name="logworkage" type="integer" required="false" phpName="LogWorkAge"/>
+        <column name="workloghourssum" type="double" required="false" phpName="WorkLogHoursSum"/>
+        <column name="worklogusername" type="varchar" size="128" required="false" phpName="WorkLogUserName"/>
+        <column name="worklogkyear" type="integer" required="false" phpName="WorkLogYear"/>
+        <column name="worklogmonth" type="integer" required="false" phpName="WorkLogMonth"/>
+        <column name="worklogdatatime" type="integer" required="false" phpName="WorkLogDataTime"/>
+        <column name="worklogage" type="integer" required="false" phpName="WorkLogAge"/>
         <column name="countissues" type="integer" required="false" phpName="CountIssues"/>
         <column name="countissuespersent" type="double" required="false" phpName="CountIssuesPersent"/>
         <column name="estimatedhourssubtask" type="double" required="false" phpName="EstimatedHoursSubTask"/>
@@ -122,12 +122,12 @@
         <column name="nonbil" type="varchar" size="24" required="false" phpName="NonBil"/>
         <column name="assignee" type="varchar" size="128" required="false" phpName="Assignee"/>
         <column name="estimatedhourssum" type="double" required="false" phpName="EstimatedHoursSum"/>
-        <column name="logworkhourssum" type="double" required="false" phpName="LogWorkHoursSum"/>
-        <column name="logworkusername" type="varchar" size="128" required="false" phpName="LogWorkUserName"/>
-        <column name="logworkyear" type="integer" required="false" phpName="LogWorkYear"/>
-        <column name="logworkmonth" type="integer" required="false" phpName="LogWorkMonth"/>
-        <column name="logworkdatatime" type="integer" required="false" phpName="LogWorkDataTime"/>
-        <column name="logworkage" type="integer" required="false" phpName="LogWorkAge"/>
+        <column name="workloghourssum" type="double" required="false" phpName="WorkLogHoursSum"/>
+        <column name="worklogusername" type="varchar" size="128" required="false" phpName="WorkLogUserName"/>
+        <column name="worklogkyear" type="integer" required="false" phpName="WorkLogYear"/>
+        <column name="worklogmonth" type="integer" required="false" phpName="WorkLogMonth"/>
+        <column name="worklogdatatime" type="integer" required="false" phpName="WorkLogDataTime"/>
+        <column name="worklogage" type="integer" required="false" phpName="WorkLogAge"/>
         <column name="countissues" type="integer" required="false" phpName="CountIssues"/>
         <column name="countissuespersent" type="double" required="false" phpName="CountIssuesPersent"/>
         <column name="estimatedhourssubtask" type="double" required="false" phpName="EstimatedHoursSubTask"/>
