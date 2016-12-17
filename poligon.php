@@ -11,8 +11,8 @@ require "cfunctions.php";
 
 //echo date('M-Y');
 //loadBigReport(); // загружаем myDate Store в базу
-//loadAnaliticReport();
-loadAnaliticNonBillReport();
+loadAnaliticReport();
+//loadAnaliticNonBillReport();
 //
 
 

@@ -59,7 +59,7 @@ class myAnaliticTableMap extends TableMap
     /**
      * The total number of columns
      */
-    const NUM_COLUMNS = 18;
+    const NUM_COLUMNS = 19;
 
     /**
      * The number of lazy-loaded columns
@@ -69,7 +69,7 @@ class myAnaliticTableMap extends TableMap
     /**
      * The number of columns to hydrate (NUM_COLUMNS - NUM_LAZY_LOAD_COLUMNS)
      */
-    const NUM_HYDRATE_COLUMNS = 18;
+    const NUM_HYDRATE_COLUMNS = 19;
 
     /**
      * the column name for the id field
@@ -107,34 +107,39 @@ class myAnaliticTableMap extends TableMap
     const COL_ESTIMATEDHOURSSUM = 'myanalitic.estimatedhourssum';
 
     /**
-     * the column name for the logworkhourssum field
+     * the column name for the workloghourssum field
      */
-    const COL_LOGWORKHOURSSUM = 'myanalitic.logworkhourssum';
+    const COL_WORKLOGHOURSSUM = 'myanalitic.workloghourssum';
 
     /**
-     * the column name for the logworkusername field
+     * the column name for the worklogusername field
      */
-    const COL_LOGWORKUSERNAME = 'myanalitic.logworkusername';
+    const COL_WORKLOGUSERNAME = 'myanalitic.worklogusername';
 
     /**
-     * the column name for the logworkyear field
+     * the column name for the worklogkyear field
      */
-    const COL_LOGWORKYEAR = 'myanalitic.logworkyear';
+    const COL_WORKLOGKYEAR = 'myanalitic.worklogkyear';
 
     /**
-     * the column name for the logworkmonth field
+     * the column name for the worklogmonth field
      */
-    const COL_LOGWORKMONTH = 'myanalitic.logworkmonth';
+    const COL_WORKLOGMONTH = 'myanalitic.worklogmonth';
 
     /**
-     * the column name for the logworkdatatime field
+     * the column name for the worklogdatatime field
      */
-    const COL_LOGWORKDATATIME = 'myanalitic.logworkdatatime';
+    const COL_WORKLOGDATATIME = 'myanalitic.worklogdatatime';
 
     /**
-     * the column name for the logworkage field
+     * the column name for the worklogyearmonth field
      */
-    const COL_LOGWORKAGE = 'myanalitic.logworkage';
+    const COL_WORKLOGYEARMONTH = 'myanalitic.worklogyearmonth';
+
+    /**
+     * the column name for the worklogage field
+     */
+    const COL_WORKLOGAGE = 'myanalitic.worklogage';
 
     /**
      * the column name for the countissues field
@@ -173,11 +178,11 @@ class myAnaliticTableMap extends TableMap
      * e.g. self::$fieldNames[self::TYPE_PHPNAME][0] = 'Id'
      */
     protected static $fieldNames = array (
-        self::TYPE_PHPNAME       => array('Id', 'ProjectName', 'IssueKey', 'InitialEstimate', 'NonBil', 'Assignee', 'EstimatedHoursSum', 'LogWorkHoursSum', 'LogWorkUserName', 'LogWorkYear', 'LogWorkMonth', 'LogWorkDataTime', 'LogWorkAge', 'CountIssues', 'CountIssuesPersent', 'EstimatedHoursSubTask', 'LogedHours', 'RemainingHours', ),
-        self::TYPE_CAMELNAME     => array('id', 'projectName', 'issueKey', 'initialEstimate', 'nonBil', 'assignee', 'estimatedHoursSum', 'logWorkHoursSum', 'logWorkUserName', 'logWorkYear', 'logWorkMonth', 'logWorkDataTime', 'logWorkAge', 'countIssues', 'countIssuesPersent', 'estimatedHoursSubTask', 'logedHours', 'remainingHours', ),
-        self::TYPE_COLNAME       => array(myAnaliticTableMap::COL_ID, myAnaliticTableMap::COL_PROJECTNAME, myAnaliticTableMap::COL_ISSUEKEY, myAnaliticTableMap::COL_INITIALESTIMATE, myAnaliticTableMap::COL_NONBIL, myAnaliticTableMap::COL_ASSIGNEE, myAnaliticTableMap::COL_ESTIMATEDHOURSSUM, myAnaliticTableMap::COL_LOGWORKHOURSSUM, myAnaliticTableMap::COL_LOGWORKUSERNAME, myAnaliticTableMap::COL_LOGWORKYEAR, myAnaliticTableMap::COL_LOGWORKMONTH, myAnaliticTableMap::COL_LOGWORKDATATIME, myAnaliticTableMap::COL_LOGWORKAGE, myAnaliticTableMap::COL_COUNTISSUES, myAnaliticTableMap::COL_COUNTISSUESPERSENT, myAnaliticTableMap::COL_ESTIMATEDHOURSSUBTASK, myAnaliticTableMap::COL_LOGEDHOURS, myAnaliticTableMap::COL_REMAININGHOURS, ),
-        self::TYPE_FIELDNAME     => array('id', 'projectname', 'issuekey', 'initialestimate', 'nonbil', 'assignee', 'estimatedhourssum', 'logworkhourssum', 'logworkusername', 'logworkyear', 'logworkmonth', 'logworkdatatime', 'logworkage', 'countissues', 'countissuespersent', 'estimatedhourssubtask', 'logedhours', 'remaininghours', ),
-        self::TYPE_NUM           => array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, )
+        self::TYPE_PHPNAME       => array('Id', 'ProjectName', 'IssueKey', 'InitialEstimate', 'NonBil', 'Assignee', 'EstimatedHoursSum', 'WorkLogHoursSum', 'WorkLogUserName', 'WorkLogYear', 'WorkLogMonth', 'WorkLogDataTime', 'WorkLogYearMonth', 'WorkLogAge', 'CountIssues', 'CountIssuesPersent', 'EstimatedHoursSubTask', 'LogedHours', 'RemainingHours', ),
+        self::TYPE_CAMELNAME     => array('id', 'projectName', 'issueKey', 'initialEstimate', 'nonBil', 'assignee', 'estimatedHoursSum', 'workLogHoursSum', 'workLogUserName', 'workLogYear', 'workLogMonth', 'workLogDataTime', 'workLogYearMonth', 'workLogAge', 'countIssues', 'countIssuesPersent', 'estimatedHoursSubTask', 'logedHours', 'remainingHours', ),
+        self::TYPE_COLNAME       => array(myAnaliticTableMap::COL_ID, myAnaliticTableMap::COL_PROJECTNAME, myAnaliticTableMap::COL_ISSUEKEY, myAnaliticTableMap::COL_INITIALESTIMATE, myAnaliticTableMap::COL_NONBIL, myAnaliticTableMap::COL_ASSIGNEE, myAnaliticTableMap::COL_ESTIMATEDHOURSSUM, myAnaliticTableMap::COL_WORKLOGHOURSSUM, myAnaliticTableMap::COL_WORKLOGUSERNAME, myAnaliticTableMap::COL_WORKLOGKYEAR, myAnaliticTableMap::COL_WORKLOGMONTH, myAnaliticTableMap::COL_WORKLOGDATATIME, myAnaliticTableMap::COL_WORKLOGYEARMONTH, myAnaliticTableMap::COL_WORKLOGAGE, myAnaliticTableMap::COL_COUNTISSUES, myAnaliticTableMap::COL_COUNTISSUESPERSENT, myAnaliticTableMap::COL_ESTIMATEDHOURSSUBTASK, myAnaliticTableMap::COL_LOGEDHOURS, myAnaliticTableMap::COL_REMAININGHOURS, ),
+        self::TYPE_FIELDNAME     => array('id', 'projectname', 'issuekey', 'initialestimate', 'nonbil', 'assignee', 'estimatedhourssum', 'workloghourssum', 'worklogusername', 'worklogkyear', 'worklogmonth', 'worklogdatatime', 'worklogyearmonth', 'worklogage', 'countissues', 'countissuespersent', 'estimatedhourssubtask', 'logedhours', 'remaininghours', ),
+        self::TYPE_NUM           => array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, )
     );
 
     /**
@@ -187,11 +192,11 @@ class myAnaliticTableMap extends TableMap
      * e.g. self::$fieldKeys[self::TYPE_PHPNAME]['Id'] = 0
      */
     protected static $fieldKeys = array (
-        self::TYPE_PHPNAME       => array('Id' => 0, 'ProjectName' => 1, 'IssueKey' => 2, 'InitialEstimate' => 3, 'NonBil' => 4, 'Assignee' => 5, 'EstimatedHoursSum' => 6, 'LogWorkHoursSum' => 7, 'LogWorkUserName' => 8, 'LogWorkYear' => 9, 'LogWorkMonth' => 10, 'LogWorkDataTime' => 11, 'LogWorkAge' => 12, 'CountIssues' => 13, 'CountIssuesPersent' => 14, 'EstimatedHoursSubTask' => 15, 'LogedHours' => 16, 'RemainingHours' => 17, ),
-        self::TYPE_CAMELNAME     => array('id' => 0, 'projectName' => 1, 'issueKey' => 2, 'initialEstimate' => 3, 'nonBil' => 4, 'assignee' => 5, 'estimatedHoursSum' => 6, 'logWorkHoursSum' => 7, 'logWorkUserName' => 8, 'logWorkYear' => 9, 'logWorkMonth' => 10, 'logWorkDataTime' => 11, 'logWorkAge' => 12, 'countIssues' => 13, 'countIssuesPersent' => 14, 'estimatedHoursSubTask' => 15, 'logedHours' => 16, 'remainingHours' => 17, ),
-        self::TYPE_COLNAME       => array(myAnaliticTableMap::COL_ID => 0, myAnaliticTableMap::COL_PROJECTNAME => 1, myAnaliticTableMap::COL_ISSUEKEY => 2, myAnaliticTableMap::COL_INITIALESTIMATE => 3, myAnaliticTableMap::COL_NONBIL => 4, myAnaliticTableMap::COL_ASSIGNEE => 5, myAnaliticTableMap::COL_ESTIMATEDHOURSSUM => 6, myAnaliticTableMap::COL_LOGWORKHOURSSUM => 7, myAnaliticTableMap::COL_LOGWORKUSERNAME => 8, myAnaliticTableMap::COL_LOGWORKYEAR => 9, myAnaliticTableMap::COL_LOGWORKMONTH => 10, myAnaliticTableMap::COL_LOGWORKDATATIME => 11, myAnaliticTableMap::COL_LOGWORKAGE => 12, myAnaliticTableMap::COL_COUNTISSUES => 13, myAnaliticTableMap::COL_COUNTISSUESPERSENT => 14, myAnaliticTableMap::COL_ESTIMATEDHOURSSUBTASK => 15, myAnaliticTableMap::COL_LOGEDHOURS => 16, myAnaliticTableMap::COL_REMAININGHOURS => 17, ),
-        self::TYPE_FIELDNAME     => array('id' => 0, 'projectname' => 1, 'issuekey' => 2, 'initialestimate' => 3, 'nonbil' => 4, 'assignee' => 5, 'estimatedhourssum' => 6, 'logworkhourssum' => 7, 'logworkusername' => 8, 'logworkyear' => 9, 'logworkmonth' => 10, 'logworkdatatime' => 11, 'logworkage' => 12, 'countissues' => 13, 'countissuespersent' => 14, 'estimatedhourssubtask' => 15, 'logedhours' => 16, 'remaininghours' => 17, ),
-        self::TYPE_NUM           => array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, )
+        self::TYPE_PHPNAME       => array('Id' => 0, 'ProjectName' => 1, 'IssueKey' => 2, 'InitialEstimate' => 3, 'NonBil' => 4, 'Assignee' => 5, 'EstimatedHoursSum' => 6, 'WorkLogHoursSum' => 7, 'WorkLogUserName' => 8, 'WorkLogYear' => 9, 'WorkLogMonth' => 10, 'WorkLogDataTime' => 11, 'WorkLogYearMonth' => 12, 'WorkLogAge' => 13, 'CountIssues' => 14, 'CountIssuesPersent' => 15, 'EstimatedHoursSubTask' => 16, 'LogedHours' => 17, 'RemainingHours' => 18, ),
+        self::TYPE_CAMELNAME     => array('id' => 0, 'projectName' => 1, 'issueKey' => 2, 'initialEstimate' => 3, 'nonBil' => 4, 'assignee' => 5, 'estimatedHoursSum' => 6, 'workLogHoursSum' => 7, 'workLogUserName' => 8, 'workLogYear' => 9, 'workLogMonth' => 10, 'workLogDataTime' => 11, 'workLogYearMonth' => 12, 'workLogAge' => 13, 'countIssues' => 14, 'countIssuesPersent' => 15, 'estimatedHoursSubTask' => 16, 'logedHours' => 17, 'remainingHours' => 18, ),
+        self::TYPE_COLNAME       => array(myAnaliticTableMap::COL_ID => 0, myAnaliticTableMap::COL_PROJECTNAME => 1, myAnaliticTableMap::COL_ISSUEKEY => 2, myAnaliticTableMap::COL_INITIALESTIMATE => 3, myAnaliticTableMap::COL_NONBIL => 4, myAnaliticTableMap::COL_ASSIGNEE => 5, myAnaliticTableMap::COL_ESTIMATEDHOURSSUM => 6, myAnaliticTableMap::COL_WORKLOGHOURSSUM => 7, myAnaliticTableMap::COL_WORKLOGUSERNAME => 8, myAnaliticTableMap::COL_WORKLOGKYEAR => 9, myAnaliticTableMap::COL_WORKLOGMONTH => 10, myAnaliticTableMap::COL_WORKLOGDATATIME => 11, myAnaliticTableMap::COL_WORKLOGYEARMONTH => 12, myAnaliticTableMap::COL_WORKLOGAGE => 13, myAnaliticTableMap::COL_COUNTISSUES => 14, myAnaliticTableMap::COL_COUNTISSUESPERSENT => 15, myAnaliticTableMap::COL_ESTIMATEDHOURSSUBTASK => 16, myAnaliticTableMap::COL_LOGEDHOURS => 17, myAnaliticTableMap::COL_REMAININGHOURS => 18, ),
+        self::TYPE_FIELDNAME     => array('id' => 0, 'projectname' => 1, 'issuekey' => 2, 'initialestimate' => 3, 'nonbil' => 4, 'assignee' => 5, 'estimatedhourssum' => 6, 'workloghourssum' => 7, 'worklogusername' => 8, 'worklogkyear' => 9, 'worklogmonth' => 10, 'worklogdatatime' => 11, 'worklogyearmonth' => 12, 'worklogage' => 13, 'countissues' => 14, 'countissuespersent' => 15, 'estimatedhourssubtask' => 16, 'logedhours' => 17, 'remaininghours' => 18, ),
+        self::TYPE_NUM           => array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, )
     );
 
     /**
@@ -218,12 +223,13 @@ class myAnaliticTableMap extends TableMap
         $this->addColumn('nonbil', 'NonBil', 'VARCHAR', false, 24, null);
         $this->addColumn('assignee', 'Assignee', 'VARCHAR', false, 128, null);
         $this->addColumn('estimatedhourssum', 'EstimatedHoursSum', 'DOUBLE', false, null, null);
-        $this->addColumn('logworkhourssum', 'LogWorkHoursSum', 'DOUBLE', false, null, null);
-        $this->addColumn('logworkusername', 'LogWorkUserName', 'VARCHAR', false, 128, null);
-        $this->addColumn('logworkyear', 'LogWorkYear', 'INTEGER', false, null, null);
-        $this->addColumn('logworkmonth', 'LogWorkMonth', 'INTEGER', false, null, null);
-        $this->addColumn('logworkdatatime', 'LogWorkDataTime', 'INTEGER', false, null, null);
-        $this->addColumn('logworkage', 'LogWorkAge', 'INTEGER', false, null, null);
+        $this->addColumn('workloghourssum', 'WorkLogHoursSum', 'DOUBLE', false, null, null);
+        $this->addColumn('worklogusername', 'WorkLogUserName', 'VARCHAR', false, 128, null);
+        $this->addColumn('worklogkyear', 'WorkLogYear', 'INTEGER', false, null, null);
+        $this->addColumn('worklogmonth', 'WorkLogMonth', 'VARCHAR', false, 128, null);
+        $this->addColumn('worklogdatatime', 'WorkLogDataTime', 'DATE', false, null, null);
+        $this->addColumn('worklogyearmonth', 'WorkLogYearMonth', 'VARCHAR', false, 128, null);
+        $this->addColumn('worklogage', 'WorkLogAge', 'INTEGER', false, null, null);
         $this->addColumn('countissues', 'CountIssues', 'INTEGER', false, null, null);
         $this->addColumn('countissuespersent', 'CountIssuesPersent', 'DOUBLE', false, null, null);
         $this->addColumn('estimatedhourssubtask', 'EstimatedHoursSubTask', 'DOUBLE', false, null, null);
@@ -386,12 +392,13 @@ class myAnaliticTableMap extends TableMap
             $criteria->addSelectColumn(myAnaliticTableMap::COL_NONBIL);
             $criteria->addSelectColumn(myAnaliticTableMap::COL_ASSIGNEE);
             $criteria->addSelectColumn(myAnaliticTableMap::COL_ESTIMATEDHOURSSUM);
-            $criteria->addSelectColumn(myAnaliticTableMap::COL_LOGWORKHOURSSUM);
-            $criteria->addSelectColumn(myAnaliticTableMap::COL_LOGWORKUSERNAME);
-            $criteria->addSelectColumn(myAnaliticTableMap::COL_LOGWORKYEAR);
-            $criteria->addSelectColumn(myAnaliticTableMap::COL_LOGWORKMONTH);
-            $criteria->addSelectColumn(myAnaliticTableMap::COL_LOGWORKDATATIME);
-            $criteria->addSelectColumn(myAnaliticTableMap::COL_LOGWORKAGE);
+            $criteria->addSelectColumn(myAnaliticTableMap::COL_WORKLOGHOURSSUM);
+            $criteria->addSelectColumn(myAnaliticTableMap::COL_WORKLOGUSERNAME);
+            $criteria->addSelectColumn(myAnaliticTableMap::COL_WORKLOGKYEAR);
+            $criteria->addSelectColumn(myAnaliticTableMap::COL_WORKLOGMONTH);
+            $criteria->addSelectColumn(myAnaliticTableMap::COL_WORKLOGDATATIME);
+            $criteria->addSelectColumn(myAnaliticTableMap::COL_WORKLOGYEARMONTH);
+            $criteria->addSelectColumn(myAnaliticTableMap::COL_WORKLOGAGE);
             $criteria->addSelectColumn(myAnaliticTableMap::COL_COUNTISSUES);
             $criteria->addSelectColumn(myAnaliticTableMap::COL_COUNTISSUESPERSENT);
             $criteria->addSelectColumn(myAnaliticTableMap::COL_ESTIMATEDHOURSSUBTASK);
@@ -405,12 +412,13 @@ class myAnaliticTableMap extends TableMap
             $criteria->addSelectColumn($alias . '.nonbil');
             $criteria->addSelectColumn($alias . '.assignee');
             $criteria->addSelectColumn($alias . '.estimatedhourssum');
-            $criteria->addSelectColumn($alias . '.logworkhourssum');
-            $criteria->addSelectColumn($alias . '.logworkusername');
-            $criteria->addSelectColumn($alias . '.logworkyear');
-            $criteria->addSelectColumn($alias . '.logworkmonth');
-            $criteria->addSelectColumn($alias . '.logworkdatatime');
-            $criteria->addSelectColumn($alias . '.logworkage');
+            $criteria->addSelectColumn($alias . '.workloghourssum');
+            $criteria->addSelectColumn($alias . '.worklogusername');
+            $criteria->addSelectColumn($alias . '.worklogkyear');
+            $criteria->addSelectColumn($alias . '.worklogmonth');
+            $criteria->addSelectColumn($alias . '.worklogdatatime');
+            $criteria->addSelectColumn($alias . '.worklogyearmonth');
+            $criteria->addSelectColumn($alias . '.worklogage');
             $criteria->addSelectColumn($alias . '.countissues');
             $criteria->addSelectColumn($alias . '.countissuespersent');
             $criteria->addSelectColumn($alias . '.estimatedhourssubtask');
