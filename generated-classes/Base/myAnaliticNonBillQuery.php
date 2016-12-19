@@ -28,6 +28,7 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticNonBillQuery orderByEstimatedHoursSum($order = Criteria::ASC) Order by the estimatedhourssum column
  * @method     ChildmyAnaliticNonBillQuery orderByWorkLogHoursSum($order = Criteria::ASC) Order by the workloghourssum column
  * @method     ChildmyAnaliticNonBillQuery orderByWorkLogUserName($order = Criteria::ASC) Order by the worklogusername column
+ * @method     ChildmyAnaliticNonBillQuery orderByWorkLogLogin($order = Criteria::ASC) Order by the workloglogin column
  * @method     ChildmyAnaliticNonBillQuery orderByWorkLogYear($order = Criteria::ASC) Order by the worklogkyear column
  * @method     ChildmyAnaliticNonBillQuery orderByWorkLogMonth($order = Criteria::ASC) Order by the worklogmonth column
  * @method     ChildmyAnaliticNonBillQuery orderByWorkLogDataTime($order = Criteria::ASC) Order by the worklogdatatime column
@@ -36,7 +37,6 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticNonBillQuery orderByCountIssues($order = Criteria::ASC) Order by the countissues column
  * @method     ChildmyAnaliticNonBillQuery orderByCountIssuesPersent($order = Criteria::ASC) Order by the countissuespersent column
  * @method     ChildmyAnaliticNonBillQuery orderByEstimatedHoursSubTask($order = Criteria::ASC) Order by the estimatedhourssubtask column
- * @method     ChildmyAnaliticNonBillQuery orderByLogedHours($order = Criteria::ASC) Order by the logedhours column
  * @method     ChildmyAnaliticNonBillQuery orderByRemainingHours($order = Criteria::ASC) Order by the remaininghours column
  *
  * @method     ChildmyAnaliticNonBillQuery groupById() Group by the id column
@@ -48,6 +48,7 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticNonBillQuery groupByEstimatedHoursSum() Group by the estimatedhourssum column
  * @method     ChildmyAnaliticNonBillQuery groupByWorkLogHoursSum() Group by the workloghourssum column
  * @method     ChildmyAnaliticNonBillQuery groupByWorkLogUserName() Group by the worklogusername column
+ * @method     ChildmyAnaliticNonBillQuery groupByWorkLogLogin() Group by the workloglogin column
  * @method     ChildmyAnaliticNonBillQuery groupByWorkLogYear() Group by the worklogkyear column
  * @method     ChildmyAnaliticNonBillQuery groupByWorkLogMonth() Group by the worklogmonth column
  * @method     ChildmyAnaliticNonBillQuery groupByWorkLogDataTime() Group by the worklogdatatime column
@@ -56,7 +57,6 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticNonBillQuery groupByCountIssues() Group by the countissues column
  * @method     ChildmyAnaliticNonBillQuery groupByCountIssuesPersent() Group by the countissuespersent column
  * @method     ChildmyAnaliticNonBillQuery groupByEstimatedHoursSubTask() Group by the estimatedhourssubtask column
- * @method     ChildmyAnaliticNonBillQuery groupByLogedHours() Group by the logedhours column
  * @method     ChildmyAnaliticNonBillQuery groupByRemainingHours() Group by the remaininghours column
  *
  * @method     ChildmyAnaliticNonBillQuery leftJoin($relation) Adds a LEFT JOIN clause to the query
@@ -79,15 +79,15 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticNonBill findOneByEstimatedHoursSum(double $estimatedhourssum) Return the first ChildmyAnaliticNonBill filtered by the estimatedhourssum column
  * @method     ChildmyAnaliticNonBill findOneByWorkLogHoursSum(double $workloghourssum) Return the first ChildmyAnaliticNonBill filtered by the workloghourssum column
  * @method     ChildmyAnaliticNonBill findOneByWorkLogUserName(string $worklogusername) Return the first ChildmyAnaliticNonBill filtered by the worklogusername column
+ * @method     ChildmyAnaliticNonBill findOneByWorkLogLogin(string $workloglogin) Return the first ChildmyAnaliticNonBill filtered by the workloglogin column
  * @method     ChildmyAnaliticNonBill findOneByWorkLogYear(int $worklogkyear) Return the first ChildmyAnaliticNonBill filtered by the worklogkyear column
- * @method     ChildmyAnaliticNonBill findOneByWorkLogMonth(string $worklogmonth) Return the first ChildmyAnaliticNonBill filtered by the worklogmonth column
+ * @method     ChildmyAnaliticNonBill findOneByWorkLogMonth(int $worklogmonth) Return the first ChildmyAnaliticNonBill filtered by the worklogmonth column
  * @method     ChildmyAnaliticNonBill findOneByWorkLogDataTime(string $worklogdatatime) Return the first ChildmyAnaliticNonBill filtered by the worklogdatatime column
  * @method     ChildmyAnaliticNonBill findOneByWorkLogYearMonth(string $worklogyearmonth) Return the first ChildmyAnaliticNonBill filtered by the worklogyearmonth column
  * @method     ChildmyAnaliticNonBill findOneByWorkLogAge(int $worklogage) Return the first ChildmyAnaliticNonBill filtered by the worklogage column
  * @method     ChildmyAnaliticNonBill findOneByCountIssues(int $countissues) Return the first ChildmyAnaliticNonBill filtered by the countissues column
  * @method     ChildmyAnaliticNonBill findOneByCountIssuesPersent(double $countissuespersent) Return the first ChildmyAnaliticNonBill filtered by the countissuespersent column
  * @method     ChildmyAnaliticNonBill findOneByEstimatedHoursSubTask(double $estimatedhourssubtask) Return the first ChildmyAnaliticNonBill filtered by the estimatedhourssubtask column
- * @method     ChildmyAnaliticNonBill findOneByLogedHours(double $logedhours) Return the first ChildmyAnaliticNonBill filtered by the logedhours column
  * @method     ChildmyAnaliticNonBill findOneByRemainingHours(double $remaininghours) Return the first ChildmyAnaliticNonBill filtered by the remaininghours column *
 
  * @method     ChildmyAnaliticNonBill requirePk($key, ConnectionInterface $con = null) Return the ChildmyAnaliticNonBill by primary key and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
@@ -102,15 +102,15 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticNonBill requireOneByEstimatedHoursSum(double $estimatedhourssum) Return the first ChildmyAnaliticNonBill filtered by the estimatedhourssum column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnaliticNonBill requireOneByWorkLogHoursSum(double $workloghourssum) Return the first ChildmyAnaliticNonBill filtered by the workloghourssum column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnaliticNonBill requireOneByWorkLogUserName(string $worklogusername) Return the first ChildmyAnaliticNonBill filtered by the worklogusername column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
+ * @method     ChildmyAnaliticNonBill requireOneByWorkLogLogin(string $workloglogin) Return the first ChildmyAnaliticNonBill filtered by the workloglogin column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnaliticNonBill requireOneByWorkLogYear(int $worklogkyear) Return the first ChildmyAnaliticNonBill filtered by the worklogkyear column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
- * @method     ChildmyAnaliticNonBill requireOneByWorkLogMonth(string $worklogmonth) Return the first ChildmyAnaliticNonBill filtered by the worklogmonth column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
+ * @method     ChildmyAnaliticNonBill requireOneByWorkLogMonth(int $worklogmonth) Return the first ChildmyAnaliticNonBill filtered by the worklogmonth column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnaliticNonBill requireOneByWorkLogDataTime(string $worklogdatatime) Return the first ChildmyAnaliticNonBill filtered by the worklogdatatime column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnaliticNonBill requireOneByWorkLogYearMonth(string $worklogyearmonth) Return the first ChildmyAnaliticNonBill filtered by the worklogyearmonth column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnaliticNonBill requireOneByWorkLogAge(int $worklogage) Return the first ChildmyAnaliticNonBill filtered by the worklogage column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnaliticNonBill requireOneByCountIssues(int $countissues) Return the first ChildmyAnaliticNonBill filtered by the countissues column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnaliticNonBill requireOneByCountIssuesPersent(double $countissuespersent) Return the first ChildmyAnaliticNonBill filtered by the countissuespersent column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnaliticNonBill requireOneByEstimatedHoursSubTask(double $estimatedhourssubtask) Return the first ChildmyAnaliticNonBill filtered by the estimatedhourssubtask column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
- * @method     ChildmyAnaliticNonBill requireOneByLogedHours(double $logedhours) Return the first ChildmyAnaliticNonBill filtered by the logedhours column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnaliticNonBill requireOneByRemainingHours(double $remaininghours) Return the first ChildmyAnaliticNonBill filtered by the remaininghours column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  *
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection find(ConnectionInterface $con = null) Return ChildmyAnaliticNonBill objects based on current ModelCriteria
@@ -123,15 +123,15 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByEstimatedHoursSum(double $estimatedhourssum) Return ChildmyAnaliticNonBill objects filtered by the estimatedhourssum column
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByWorkLogHoursSum(double $workloghourssum) Return ChildmyAnaliticNonBill objects filtered by the workloghourssum column
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByWorkLogUserName(string $worklogusername) Return ChildmyAnaliticNonBill objects filtered by the worklogusername column
+ * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByWorkLogLogin(string $workloglogin) Return ChildmyAnaliticNonBill objects filtered by the workloglogin column
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByWorkLogYear(int $worklogkyear) Return ChildmyAnaliticNonBill objects filtered by the worklogkyear column
- * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByWorkLogMonth(string $worklogmonth) Return ChildmyAnaliticNonBill objects filtered by the worklogmonth column
+ * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByWorkLogMonth(int $worklogmonth) Return ChildmyAnaliticNonBill objects filtered by the worklogmonth column
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByWorkLogDataTime(string $worklogdatatime) Return ChildmyAnaliticNonBill objects filtered by the worklogdatatime column
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByWorkLogYearMonth(string $worklogyearmonth) Return ChildmyAnaliticNonBill objects filtered by the worklogyearmonth column
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByWorkLogAge(int $worklogage) Return ChildmyAnaliticNonBill objects filtered by the worklogage column
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByCountIssues(int $countissues) Return ChildmyAnaliticNonBill objects filtered by the countissues column
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByCountIssuesPersent(double $countissuespersent) Return ChildmyAnaliticNonBill objects filtered by the countissuespersent column
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByEstimatedHoursSubTask(double $estimatedhourssubtask) Return ChildmyAnaliticNonBill objects filtered by the estimatedhourssubtask column
- * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByLogedHours(double $logedhours) Return ChildmyAnaliticNonBill objects filtered by the logedhours column
  * @method     ChildmyAnaliticNonBill[]|ObjectCollection findByRemainingHours(double $remaininghours) Return ChildmyAnaliticNonBill objects filtered by the remaininghours column
  * @method     ChildmyAnaliticNonBill[]|\Propel\Runtime\Util\PropelModelPager paginate($page = 1, $maxPerPage = 10, ConnectionInterface $con = null) Issue a SELECT query based on the current ModelCriteria and uses a page and a maximum number of results per page to compute an offset and a limit
  *
@@ -231,7 +231,7 @@ abstract class myAnaliticNonBillQuery extends ModelCriteria
      */
     protected function findPkSimple($key, ConnectionInterface $con)
     {
-        $sql = 'SELECT id, projectname, issuekey, initialestimate, nonbil, assignee, estimatedhourssum, workloghourssum, worklogusername, worklogkyear, worklogmonth, worklogdatatime, worklogyearmonth, worklogage, countissues, countissuespersent, estimatedhourssubtask, logedhours, remaininghours FROM myanaliticnonbill WHERE id = :p0';
+        $sql = 'SELECT id, projectname, issuekey, initialestimate, nonbil, assignee, estimatedhourssum, workloghourssum, worklogusername, workloglogin, worklogkyear, worklogmonth, worklogdatatime, worklogyearmonth, worklogage, countissues, countissuespersent, estimatedhourssubtask, remaininghours FROM myanaliticnonbill WHERE id = :p0';
         try {
             $stmt = $con->prepare($sql);
             $stmt->bindValue(':p0', $key, PDO::PARAM_INT);
@@ -595,6 +595,31 @@ abstract class myAnaliticNonBillQuery extends ModelCriteria
     }
 
     /**
+     * Filter the query on the workloglogin column
+     *
+     * Example usage:
+     * <code>
+     * $query->filterByWorkLogLogin('fooValue');   // WHERE workloglogin = 'fooValue'
+     * $query->filterByWorkLogLogin('%fooValue%', Criteria::LIKE); // WHERE workloglogin LIKE '%fooValue%'
+     * </code>
+     *
+     * @param     string $workLogLogin The value to use as filter.
+     * @param     string $comparison Operator to use for the column comparison, defaults to Criteria::EQUAL
+     *
+     * @return $this|ChildmyAnaliticNonBillQuery The current query, for fluid interface
+     */
+    public function filterByWorkLogLogin($workLogLogin = null, $comparison = null)
+    {
+        if (null === $comparison) {
+            if (is_array($workLogLogin)) {
+                $comparison = Criteria::IN;
+            }
+        }
+
+        return $this->addUsingAlias(myAnaliticNonBillTableMap::COL_WORKLOGLOGIN, $workLogLogin, $comparison);
+    }
+
+    /**
      * Filter the query on the worklogkyear column
      *
      * Example usage:
@@ -640,19 +665,35 @@ abstract class myAnaliticNonBillQuery extends ModelCriteria
      *
      * Example usage:
      * <code>
-     * $query->filterByWorkLogMonth('fooValue');   // WHERE worklogmonth = 'fooValue'
-     * $query->filterByWorkLogMonth('%fooValue%', Criteria::LIKE); // WHERE worklogmonth LIKE '%fooValue%'
+     * $query->filterByWorkLogMonth(1234); // WHERE worklogmonth = 1234
+     * $query->filterByWorkLogMonth(array(12, 34)); // WHERE worklogmonth IN (12, 34)
+     * $query->filterByWorkLogMonth(array('min' => 12)); // WHERE worklogmonth > 12
      * </code>
      *
-     * @param     string $workLogMonth The value to use as filter.
+     * @param     mixed $workLogMonth The value to use as filter.
+     *              Use scalar values for equality.
+     *              Use array values for in_array() equivalent.
+     *              Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.
      * @param     string $comparison Operator to use for the column comparison, defaults to Criteria::EQUAL
      *
      * @return $this|ChildmyAnaliticNonBillQuery The current query, for fluid interface
      */
     public function filterByWorkLogMonth($workLogMonth = null, $comparison = null)
     {
-        if (null === $comparison) {
-            if (is_array($workLogMonth)) {
+        if (is_array($workLogMonth)) {
+            $useMinMax = false;
+            if (isset($workLogMonth['min'])) {
+                $this->addUsingAlias(myAnaliticNonBillTableMap::COL_WORKLOGMONTH, $workLogMonth['min'], Criteria::GREATER_EQUAL);
+                $useMinMax = true;
+            }
+            if (isset($workLogMonth['max'])) {
+                $this->addUsingAlias(myAnaliticNonBillTableMap::COL_WORKLOGMONTH, $workLogMonth['max'], Criteria::LESS_EQUAL);
+                $useMinMax = true;
+            }
+            if ($useMinMax) {
+                return $this;
+            }
+            if (null === $comparison) {
                 $comparison = Criteria::IN;
             }
         }
@@ -890,47 +931,6 @@ abstract class myAnaliticNonBillQuery extends ModelCriteria
         }
 
         return $this->addUsingAlias(myAnaliticNonBillTableMap::COL_ESTIMATEDHOURSSUBTASK, $estimatedHoursSubTask, $comparison);
-    }
-
-    /**
-     * Filter the query on the logedhours column
-     *
-     * Example usage:
-     * <code>
-     * $query->filterByLogedHours(1234); // WHERE logedhours = 1234
-     * $query->filterByLogedHours(array(12, 34)); // WHERE logedhours IN (12, 34)
-     * $query->filterByLogedHours(array('min' => 12)); // WHERE logedhours > 12
-     * </code>
-     *
-     * @param     mixed $logedHours The value to use as filter.
-     *              Use scalar values for equality.
-     *              Use array values for in_array() equivalent.
-     *              Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.
-     * @param     string $comparison Operator to use for the column comparison, defaults to Criteria::EQUAL
-     *
-     * @return $this|ChildmyAnaliticNonBillQuery The current query, for fluid interface
-     */
-    public function filterByLogedHours($logedHours = null, $comparison = null)
-    {
-        if (is_array($logedHours)) {
-            $useMinMax = false;
-            if (isset($logedHours['min'])) {
-                $this->addUsingAlias(myAnaliticNonBillTableMap::COL_LOGEDHOURS, $logedHours['min'], Criteria::GREATER_EQUAL);
-                $useMinMax = true;
-            }
-            if (isset($logedHours['max'])) {
-                $this->addUsingAlias(myAnaliticNonBillTableMap::COL_LOGEDHOURS, $logedHours['max'], Criteria::LESS_EQUAL);
-                $useMinMax = true;
-            }
-            if ($useMinMax) {
-                return $this;
-            }
-            if (null === $comparison) {
-                $comparison = Criteria::IN;
-            }
-        }
-
-        return $this->addUsingAlias(myAnaliticNonBillTableMap::COL_LOGEDHOURS, $logedHours, $comparison);
     }
 
     /**

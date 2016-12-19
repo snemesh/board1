@@ -28,6 +28,7 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticQuery orderByEstimatedHoursSum($order = Criteria::ASC) Order by the estimatedhourssum column
  * @method     ChildmyAnaliticQuery orderByWorkLogHoursSum($order = Criteria::ASC) Order by the workloghourssum column
  * @method     ChildmyAnaliticQuery orderByWorkLogUserName($order = Criteria::ASC) Order by the worklogusername column
+ * @method     ChildmyAnaliticQuery orderByWorkLogLogin($order = Criteria::ASC) Order by the workloglogin column
  * @method     ChildmyAnaliticQuery orderByWorkLogYear($order = Criteria::ASC) Order by the worklogkyear column
  * @method     ChildmyAnaliticQuery orderByWorkLogMonth($order = Criteria::ASC) Order by the worklogmonth column
  * @method     ChildmyAnaliticQuery orderByWorkLogDataTime($order = Criteria::ASC) Order by the worklogdatatime column
@@ -36,7 +37,6 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticQuery orderByCountIssues($order = Criteria::ASC) Order by the countissues column
  * @method     ChildmyAnaliticQuery orderByCountIssuesPersent($order = Criteria::ASC) Order by the countissuespersent column
  * @method     ChildmyAnaliticQuery orderByEstimatedHoursSubTask($order = Criteria::ASC) Order by the estimatedhourssubtask column
- * @method     ChildmyAnaliticQuery orderByLogedHours($order = Criteria::ASC) Order by the logedhours column
  * @method     ChildmyAnaliticQuery orderByRemainingHours($order = Criteria::ASC) Order by the remaininghours column
  *
  * @method     ChildmyAnaliticQuery groupById() Group by the id column
@@ -48,6 +48,7 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticQuery groupByEstimatedHoursSum() Group by the estimatedhourssum column
  * @method     ChildmyAnaliticQuery groupByWorkLogHoursSum() Group by the workloghourssum column
  * @method     ChildmyAnaliticQuery groupByWorkLogUserName() Group by the worklogusername column
+ * @method     ChildmyAnaliticQuery groupByWorkLogLogin() Group by the workloglogin column
  * @method     ChildmyAnaliticQuery groupByWorkLogYear() Group by the worklogkyear column
  * @method     ChildmyAnaliticQuery groupByWorkLogMonth() Group by the worklogmonth column
  * @method     ChildmyAnaliticQuery groupByWorkLogDataTime() Group by the worklogdatatime column
@@ -56,7 +57,6 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnaliticQuery groupByCountIssues() Group by the countissues column
  * @method     ChildmyAnaliticQuery groupByCountIssuesPersent() Group by the countissuespersent column
  * @method     ChildmyAnaliticQuery groupByEstimatedHoursSubTask() Group by the estimatedhourssubtask column
- * @method     ChildmyAnaliticQuery groupByLogedHours() Group by the logedhours column
  * @method     ChildmyAnaliticQuery groupByRemainingHours() Group by the remaininghours column
  *
  * @method     ChildmyAnaliticQuery leftJoin($relation) Adds a LEFT JOIN clause to the query
@@ -79,15 +79,15 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnalitic findOneByEstimatedHoursSum(double $estimatedhourssum) Return the first ChildmyAnalitic filtered by the estimatedhourssum column
  * @method     ChildmyAnalitic findOneByWorkLogHoursSum(double $workloghourssum) Return the first ChildmyAnalitic filtered by the workloghourssum column
  * @method     ChildmyAnalitic findOneByWorkLogUserName(string $worklogusername) Return the first ChildmyAnalitic filtered by the worklogusername column
+ * @method     ChildmyAnalitic findOneByWorkLogLogin(string $workloglogin) Return the first ChildmyAnalitic filtered by the workloglogin column
  * @method     ChildmyAnalitic findOneByWorkLogYear(int $worklogkyear) Return the first ChildmyAnalitic filtered by the worklogkyear column
- * @method     ChildmyAnalitic findOneByWorkLogMonth(string $worklogmonth) Return the first ChildmyAnalitic filtered by the worklogmonth column
+ * @method     ChildmyAnalitic findOneByWorkLogMonth(int $worklogmonth) Return the first ChildmyAnalitic filtered by the worklogmonth column
  * @method     ChildmyAnalitic findOneByWorkLogDataTime(string $worklogdatatime) Return the first ChildmyAnalitic filtered by the worklogdatatime column
  * @method     ChildmyAnalitic findOneByWorkLogYearMonth(string $worklogyearmonth) Return the first ChildmyAnalitic filtered by the worklogyearmonth column
  * @method     ChildmyAnalitic findOneByWorkLogAge(int $worklogage) Return the first ChildmyAnalitic filtered by the worklogage column
  * @method     ChildmyAnalitic findOneByCountIssues(int $countissues) Return the first ChildmyAnalitic filtered by the countissues column
  * @method     ChildmyAnalitic findOneByCountIssuesPersent(double $countissuespersent) Return the first ChildmyAnalitic filtered by the countissuespersent column
  * @method     ChildmyAnalitic findOneByEstimatedHoursSubTask(double $estimatedhourssubtask) Return the first ChildmyAnalitic filtered by the estimatedhourssubtask column
- * @method     ChildmyAnalitic findOneByLogedHours(double $logedhours) Return the first ChildmyAnalitic filtered by the logedhours column
  * @method     ChildmyAnalitic findOneByRemainingHours(double $remaininghours) Return the first ChildmyAnalitic filtered by the remaininghours column *
 
  * @method     ChildmyAnalitic requirePk($key, ConnectionInterface $con = null) Return the ChildmyAnalitic by primary key and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
@@ -102,15 +102,15 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnalitic requireOneByEstimatedHoursSum(double $estimatedhourssum) Return the first ChildmyAnalitic filtered by the estimatedhourssum column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnalitic requireOneByWorkLogHoursSum(double $workloghourssum) Return the first ChildmyAnalitic filtered by the workloghourssum column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnalitic requireOneByWorkLogUserName(string $worklogusername) Return the first ChildmyAnalitic filtered by the worklogusername column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
+ * @method     ChildmyAnalitic requireOneByWorkLogLogin(string $workloglogin) Return the first ChildmyAnalitic filtered by the workloglogin column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnalitic requireOneByWorkLogYear(int $worklogkyear) Return the first ChildmyAnalitic filtered by the worklogkyear column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
- * @method     ChildmyAnalitic requireOneByWorkLogMonth(string $worklogmonth) Return the first ChildmyAnalitic filtered by the worklogmonth column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
+ * @method     ChildmyAnalitic requireOneByWorkLogMonth(int $worklogmonth) Return the first ChildmyAnalitic filtered by the worklogmonth column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnalitic requireOneByWorkLogDataTime(string $worklogdatatime) Return the first ChildmyAnalitic filtered by the worklogdatatime column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnalitic requireOneByWorkLogYearMonth(string $worklogyearmonth) Return the first ChildmyAnalitic filtered by the worklogyearmonth column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnalitic requireOneByWorkLogAge(int $worklogage) Return the first ChildmyAnalitic filtered by the worklogage column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnalitic requireOneByCountIssues(int $countissues) Return the first ChildmyAnalitic filtered by the countissues column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnalitic requireOneByCountIssuesPersent(double $countissuespersent) Return the first ChildmyAnalitic filtered by the countissuespersent column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnalitic requireOneByEstimatedHoursSubTask(double $estimatedhourssubtask) Return the first ChildmyAnalitic filtered by the estimatedhourssubtask column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
- * @method     ChildmyAnalitic requireOneByLogedHours(double $logedhours) Return the first ChildmyAnalitic filtered by the logedhours column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  * @method     ChildmyAnalitic requireOneByRemainingHours(double $remaininghours) Return the first ChildmyAnalitic filtered by the remaininghours column and throws \Propel\Runtime\Exception\EntityNotFoundException when not found
  *
  * @method     ChildmyAnalitic[]|ObjectCollection find(ConnectionInterface $con = null) Return ChildmyAnalitic objects based on current ModelCriteria
@@ -123,15 +123,15 @@ use Propel\Runtime\Exception\PropelException;
  * @method     ChildmyAnalitic[]|ObjectCollection findByEstimatedHoursSum(double $estimatedhourssum) Return ChildmyAnalitic objects filtered by the estimatedhourssum column
  * @method     ChildmyAnalitic[]|ObjectCollection findByWorkLogHoursSum(double $workloghourssum) Return ChildmyAnalitic objects filtered by the workloghourssum column
  * @method     ChildmyAnalitic[]|ObjectCollection findByWorkLogUserName(string $worklogusername) Return ChildmyAnalitic objects filtered by the worklogusername column
+ * @method     ChildmyAnalitic[]|ObjectCollection findByWorkLogLogin(string $workloglogin) Return ChildmyAnalitic objects filtered by the workloglogin column
  * @method     ChildmyAnalitic[]|ObjectCollection findByWorkLogYear(int $worklogkyear) Return ChildmyAnalitic objects filtered by the worklogkyear column
- * @method     ChildmyAnalitic[]|ObjectCollection findByWorkLogMonth(string $worklogmonth) Return ChildmyAnalitic objects filtered by the worklogmonth column
+ * @method     ChildmyAnalitic[]|ObjectCollection findByWorkLogMonth(int $worklogmonth) Return ChildmyAnalitic objects filtered by the worklogmonth column
  * @method     ChildmyAnalitic[]|ObjectCollection findByWorkLogDataTime(string $worklogdatatime) Return ChildmyAnalitic objects filtered by the worklogdatatime column
  * @method     ChildmyAnalitic[]|ObjectCollection findByWorkLogYearMonth(string $worklogyearmonth) Return ChildmyAnalitic objects filtered by the worklogyearmonth column
  * @method     ChildmyAnalitic[]|ObjectCollection findByWorkLogAge(int $worklogage) Return ChildmyAnalitic objects filtered by the worklogage column
  * @method     ChildmyAnalitic[]|ObjectCollection findByCountIssues(int $countissues) Return ChildmyAnalitic objects filtered by the countissues column
  * @method     ChildmyAnalitic[]|ObjectCollection findByCountIssuesPersent(double $countissuespersent) Return ChildmyAnalitic objects filtered by the countissuespersent column
  * @method     ChildmyAnalitic[]|ObjectCollection findByEstimatedHoursSubTask(double $estimatedhourssubtask) Return ChildmyAnalitic objects filtered by the estimatedhourssubtask column
- * @method     ChildmyAnalitic[]|ObjectCollection findByLogedHours(double $logedhours) Return ChildmyAnalitic objects filtered by the logedhours column
  * @method     ChildmyAnalitic[]|ObjectCollection findByRemainingHours(double $remaininghours) Return ChildmyAnalitic objects filtered by the remaininghours column
  * @method     ChildmyAnalitic[]|\Propel\Runtime\Util\PropelModelPager paginate($page = 1, $maxPerPage = 10, ConnectionInterface $con = null) Issue a SELECT query based on the current ModelCriteria and uses a page and a maximum number of results per page to compute an offset and a limit
  *
@@ -231,7 +231,7 @@ abstract class myAnaliticQuery extends ModelCriteria
      */
     protected function findPkSimple($key, ConnectionInterface $con)
     {
-        $sql = 'SELECT id, projectname, issuekey, initialestimate, nonbil, assignee, estimatedhourssum, workloghourssum, worklogusername, worklogkyear, worklogmonth, worklogdatatime, worklogyearmonth, worklogage, countissues, countissuespersent, estimatedhourssubtask, logedhours, remaininghours FROM myanalitic WHERE id = :p0';
+        $sql = 'SELECT id, projectname, issuekey, initialestimate, nonbil, assignee, estimatedhourssum, workloghourssum, worklogusername, workloglogin, worklogkyear, worklogmonth, worklogdatatime, worklogyearmonth, worklogage, countissues, countissuespersent, estimatedhourssubtask, remaininghours FROM myanalitic WHERE id = :p0';
         try {
             $stmt = $con->prepare($sql);
             $stmt->bindValue(':p0', $key, PDO::PARAM_INT);
@@ -595,6 +595,31 @@ abstract class myAnaliticQuery extends ModelCriteria
     }
 
     /**
+     * Filter the query on the workloglogin column
+     *
+     * Example usage:
+     * <code>
+     * $query->filterByWorkLogLogin('fooValue');   // WHERE workloglogin = 'fooValue'
+     * $query->filterByWorkLogLogin('%fooValue%', Criteria::LIKE); // WHERE workloglogin LIKE '%fooValue%'
+     * </code>
+     *
+     * @param     string $workLogLogin The value to use as filter.
+     * @param     string $comparison Operator to use for the column comparison, defaults to Criteria::EQUAL
+     *
+     * @return $this|ChildmyAnaliticQuery The current query, for fluid interface
+     */
+    public function filterByWorkLogLogin($workLogLogin = null, $comparison = null)
+    {
+        if (null === $comparison) {
+            if (is_array($workLogLogin)) {
+                $comparison = Criteria::IN;
+            }
+        }
+
+        return $this->addUsingAlias(myAnaliticTableMap::COL_WORKLOGLOGIN, $workLogLogin, $comparison);
+    }
+
+    /**
      * Filter the query on the worklogkyear column
      *
      * Example usage:
@@ -640,19 +665,35 @@ abstract class myAnaliticQuery extends ModelCriteria
      *
      * Example usage:
      * <code>
-     * $query->filterByWorkLogMonth('fooValue');   // WHERE worklogmonth = 'fooValue'
-     * $query->filterByWorkLogMonth('%fooValue%', Criteria::LIKE); // WHERE worklogmonth LIKE '%fooValue%'
+     * $query->filterByWorkLogMonth(1234); // WHERE worklogmonth = 1234
+     * $query->filterByWorkLogMonth(array(12, 34)); // WHERE worklogmonth IN (12, 34)
+     * $query->filterByWorkLogMonth(array('min' => 12)); // WHERE worklogmonth > 12
      * </code>
      *
-     * @param     string $workLogMonth The value to use as filter.
+     * @param     mixed $workLogMonth The value to use as filter.
+     *              Use scalar values for equality.
+     *              Use array values for in_array() equivalent.
+     *              Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.
      * @param     string $comparison Operator to use for the column comparison, defaults to Criteria::EQUAL
      *
      * @return $this|ChildmyAnaliticQuery The current query, for fluid interface
      */
     public function filterByWorkLogMonth($workLogMonth = null, $comparison = null)
     {
-        if (null === $comparison) {
-            if (is_array($workLogMonth)) {
+        if (is_array($workLogMonth)) {
+            $useMinMax = false;
+            if (isset($workLogMonth['min'])) {
+                $this->addUsingAlias(myAnaliticTableMap::COL_WORKLOGMONTH, $workLogMonth['min'], Criteria::GREATER_EQUAL);
+                $useMinMax = true;
+            }
+            if (isset($workLogMonth['max'])) {
+                $this->addUsingAlias(myAnaliticTableMap::COL_WORKLOGMONTH, $workLogMonth['max'], Criteria::LESS_EQUAL);
+                $useMinMax = true;
+            }
+            if ($useMinMax) {
+                return $this;
+            }
+            if (null === $comparison) {
                 $comparison = Criteria::IN;
             }
         }
@@ -890,47 +931,6 @@ abstract class myAnaliticQuery extends ModelCriteria
         }
 
         return $this->addUsingAlias(myAnaliticTableMap::COL_ESTIMATEDHOURSSUBTASK, $estimatedHoursSubTask, $comparison);
-    }
-
-    /**
-     * Filter the query on the logedhours column
-     *
-     * Example usage:
-     * <code>
-     * $query->filterByLogedHours(1234); // WHERE logedhours = 1234
-     * $query->filterByLogedHours(array(12, 34)); // WHERE logedhours IN (12, 34)
-     * $query->filterByLogedHours(array('min' => 12)); // WHERE logedhours > 12
-     * </code>
-     *
-     * @param     mixed $logedHours The value to use as filter.
-     *              Use scalar values for equality.
-     *              Use array values for in_array() equivalent.
-     *              Use associative array('min' => $minValue, 'max' => $maxValue) for intervals.
-     * @param     string $comparison Operator to use for the column comparison, defaults to Criteria::EQUAL
-     *
-     * @return $this|ChildmyAnaliticQuery The current query, for fluid interface
-     */
-    public function filterByLogedHours($logedHours = null, $comparison = null)
-    {
-        if (is_array($logedHours)) {
-            $useMinMax = false;
-            if (isset($logedHours['min'])) {
-                $this->addUsingAlias(myAnaliticTableMap::COL_LOGEDHOURS, $logedHours['min'], Criteria::GREATER_EQUAL);
-                $useMinMax = true;
-            }
-            if (isset($logedHours['max'])) {
-                $this->addUsingAlias(myAnaliticTableMap::COL_LOGEDHOURS, $logedHours['max'], Criteria::LESS_EQUAL);
-                $useMinMax = true;
-            }
-            if ($useMinMax) {
-                return $this;
-            }
-            if (null === $comparison) {
-                $comparison = Criteria::IN;
-            }
-        }
-
-        return $this->addUsingAlias(myAnaliticTableMap::COL_LOGEDHOURS, $logedHours, $comparison);
     }
 
     /**

@@ -28,7 +28,20 @@ $defaultLogger = new Logger('defaultLogger');
 $defaultLogger->pushHandler(new StreamHandler('log/propel.log', Logger::WARNING));
 $serviceContainer->setLogger('defaultLogger', $defaultLogger);
 
-
+function converToDataTime($str){
+    if ($str=="-") return 0;
+    $step1 = explode(" ",$str);
+    $newData = explode("-",$step1[0]);
+    $mix = $newData[2]."-".$newData[0]."-".$newData[1];
+    return date('Y-m-d', strtotime($mix));
+}
+function converToYearMonth($str){
+    if ($str=="-") return 0;
+    $step1 = explode(" ",$str);
+    $newData = explode("-",$step1[0]);
+    $mix = $newData[2]."-".$newData[0]."-".$newData[1];
+    return date('Ym', strtotime($mix));
+}
 function rm_from_array($needle, &$array, $all = true){
     if(!$all){
         if(FALSE !== $key = array_search($needle,$array)) unset($array[$key]);
@@ -59,23 +72,6 @@ function getYearMonth($str){
 
     return intval($mix);
 }
-function converToDataTime($str){
-    if ($str=="-") return 0;
-    $step1 = explode(" ",$str);
-    $newData = explode("-",$step1[0]);
-    $mix = $newData[2]."-".$newData[0]."-".$newData[1];
-    return date('Y-m-d', strtotime($mix));
-}
-function converToYearMonth($str){
-    if ($str=="-") return 0;
-    $step1 = explode(" ",$str);
-    $newData = explode("-",$step1[0]);
-    $mix = $newData[2]."-".$newData[0]."-".$newData[1];
-    return date('Ym', strtotime($mix));
-}
-
-
-
 function getYear($str){
     if ($str=="-") return 0;
     $step1 = explode(" ",$str);
@@ -517,6 +513,7 @@ function GetJiraReport()
     unset($html);
     return $dataJ;
 }
+
 function ProjectAnalise(){
     $myDebugSys = new PHPDebug();
     $myDebugSys->debug("Start get Projects");
@@ -565,6 +562,7 @@ function ProjectAnalise(){
         }
     }
 }
+
 function getEstimatedHoursByProject($someProject){
     //ищем в таблице все значения Estimated напротив $someProject
     $estimP = myDataStoreQuery::create()
@@ -574,6 +572,7 @@ function getEstimatedHoursByProject($someProject){
         ->find()->toArray();
     return round($estimP[0],2);
 }
+
 /**
  * @param $someProject
  * @return float
@@ -587,6 +586,7 @@ function getSpentHoursByProject($someProject){
         ->find()->toArray();
     return round($spentP[0],2);
 }
+
 function findUserSpentInTable($someUser){
     $findUser = myEmployeeQuery::create()
         ->where('myemployee.employee = ?',$someUser)
@@ -596,6 +596,8 @@ function findUserSpentInTable($someUser){
     //echo "Rate = ".$findUser[0]["hourlyRate"]."<br>";
     return $findUser;
 }
+
+
 /**
  * @param $someProject
  * @return int
@@ -721,6 +723,7 @@ function GetEmployeeFromReport(){
         $myDebugSys->debug("The process of loading data to the myEmployee was finished");
     }
 }
+
 function loadAnaliticReport() //загружаем данные из отчета Jira в базу данный mySQL
 {
     $myDebugSys = new PHPDebug();
@@ -735,7 +738,7 @@ function loadAnaliticReport() //загружаем данные из отчет�
     $myData = getDataFromReport('http://localhost:3000/lrqli2dn35q');
     if($myData==""){
         echo "Probably we havn't data from the report - http://localhost:3000/lrv0ve06e3f, Please check";
-        //$myData = getDataFromReport('http://localhost:3000/lrqli2dn35q');
+        $myData = getDataFromReport('http://localhost:3000/lrqli2dn35q');
     }
     foreach ($myData as $index => $col)
     {
@@ -747,11 +750,9 @@ function loadAnaliticReport() //загружаем данные из отчет�
 //        echo($col[5])."  ";
 //        echo($col[6])."  ";
 //        echo($col[7])."  ";
-//        echo($col[8])." | ";
-//        echo($col[9])." | ";
-//        echo converToDataTime($col[10]);
-//        echo "<br>";
-        //echo($col[10])." <br> ";
+//        echo($col[8])."  ";
+//        echo($col[9])."  ";
+//        echo($col[10])."  ";
 //        echo($col[11])."  ";
 //        echo($col[12])."  ";
 //        echo($col[13])."  ";
@@ -766,21 +767,22 @@ function loadAnaliticReport() //загружаем данные из отчет�
         $myDataStore->setEstimatedHoursSum($col[5]);
         $myDataStore->setWorkLogHoursSum($col[6]);
         $myDataStore->setWorkLogUserName($col[7]);
-        $myDataStore->setWorkLogYear($col[8]);
-        $myDataStore->setWorkLogMonth($col[9]);
-        $myDataStore->setWorkLogDataTime(converToDataTime($col[10]));
-        $myDataStore->setWorkLogAge($col[11]);
-        $myDataStore->setCountIssues($col[12]);
-        $myDataStore->setCountIssuesPersent($col[13]);
-        $myDataStore->setEstimatedHoursSubTask($col[14]);
-        $myDataStore->setLogedHours($col[15]);
+        $myDataStore->setWorkLogLogin($col[8]);
+        $myDataStore->setWorkLogYear($col[9]);
+        $myDataStore->setWorkLogMonth($col[10]);
+        $myDataStore->setWorkLogDataTime(converToDataTime($col[11]));
+        $myDataStore->setWorkLogAge($col[12]);
+        $myDataStore->setCountIssues($col[13]);
+        $myDataStore->setCountIssuesPersent($col[14]);
+        $myDataStore->setEstimatedHoursSubTask($col[15]);
         $myDataStore->setRemainingHours($col[16]);
-        $myDataStore->setWorkLogYearMonth(converToYearMonth($col[10]));
+        $myDataStore->setWorkLogYearMonth(converToYearMonth($col[11]));
         $myDataStore->save();
         $myDataStore->clear();
     }
     $myDebugSys->debug("The process of loading data to the base was finished");
 }
+
 function loadAnaliticNonBillReport() //загружаем данные из отчета Jira в базу данный mySQL
 {
     $myDebugSys = new PHPDebug();
@@ -824,16 +826,16 @@ function loadAnaliticNonBillReport() //загружаем данные из от
         $myDataStore->setEstimatedHoursSum($col[5]);
         $myDataStore->setWorkLogHoursSum($col[6]);
         $myDataStore->setWorkLogUserName($col[7]);
-        $myDataStore->setWorkLogYear($col[8]);
-        $myDataStore->setWorkLogMonth($col[9]);
-        $myDataStore->setWorkLogDataTime(converToDataTime($col[10]));
-        $myDataStore->setWorkLogAge($col[11]);
-        $myDataStore->setCountIssues($col[12]);
-        $myDataStore->setCountIssuesPersent($col[13]);
-        $myDataStore->setEstimatedHoursSubTask($col[14]);
-        $myDataStore->setLogedHours($col[15]);
+        $myDataStore->setWorkLogLogin($col[8]);
+        $myDataStore->setWorkLogYear($col[9]);
+        $myDataStore->setWorkLogMonth($col[10]);
+        $myDataStore->setWorkLogDataTime(converToDataTime($col[11]));
+        $myDataStore->setWorkLogAge($col[12]);
+        $myDataStore->setCountIssues($col[13]);
+        $myDataStore->setCountIssuesPersent($col[14]);
+        $myDataStore->setEstimatedHoursSubTask($col[15]);
         $myDataStore->setRemainingHours($col[16]);
-        $myDataStore->setWorkLogYearMonth(converToYearMonth($col[10]));
+        $myDataStore->setWorkLogYearMonth(converToYearMonth($col[11]));
         $myDataStore->save();
         $myDataStore->clear();
     }

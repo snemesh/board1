@@ -125,6 +125,13 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
     protected $worklogusername;
 
     /**
+     * The value for the workloglogin field.
+     *
+     * @var        string
+     */
+    protected $workloglogin;
+
+    /**
      * The value for the worklogkyear field.
      *
      * @var        int
@@ -134,7 +141,7 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
     /**
      * The value for the worklogmonth field.
      *
-     * @var        string
+     * @var        int
      */
     protected $worklogmonth;
 
@@ -179,13 +186,6 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
      * @var        double
      */
     protected $estimatedhourssubtask;
-
-    /**
-     * The value for the logedhours field.
-     *
-     * @var        double
-     */
-    protected $logedhours;
 
     /**
      * The value for the remaininghours field.
@@ -518,6 +518,16 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
     }
 
     /**
+     * Get the [workloglogin] column value.
+     *
+     * @return string
+     */
+    public function getWorkLogLogin()
+    {
+        return $this->workloglogin;
+    }
+
+    /**
      * Get the [worklogkyear] column value.
      *
      * @return int
@@ -530,7 +540,7 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
     /**
      * Get the [worklogmonth] column value.
      *
-     * @return string
+     * @return int
      */
     public function getWorkLogMonth()
     {
@@ -544,7 +554,7 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
      * @param      string $format The date/time format string (either date()-style or strftime()-style).
      *                            If format is NULL, then the raw DateTime object will be returned.
      *
-     * @return string|DateTime Formatted date/time value as string or DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00
+     * @return string|DateTime Formatted date/time value as string or DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00
      *
      * @throws PropelException - if unable to parse/validate the date/time value.
      */
@@ -605,16 +615,6 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
     public function getEstimatedHoursSubTask()
     {
         return $this->estimatedhourssubtask;
-    }
-
-    /**
-     * Get the [logedhours] column value.
-     *
-     * @return double
-     */
-    public function getLogedHours()
-    {
-        return $this->logedhours;
     }
 
     /**
@@ -808,6 +808,26 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
     } // setWorkLogUserName()
 
     /**
+     * Set the value of [workloglogin] column.
+     *
+     * @param string $v new value
+     * @return $this|\myAnaliticNonBill The current object (for fluent API support)
+     */
+    public function setWorkLogLogin($v)
+    {
+        if ($v !== null) {
+            $v = (string) $v;
+        }
+
+        if ($this->workloglogin !== $v) {
+            $this->workloglogin = $v;
+            $this->modifiedColumns[myAnaliticNonBillTableMap::COL_WORKLOGLOGIN] = true;
+        }
+
+        return $this;
+    } // setWorkLogLogin()
+
+    /**
      * Set the value of [worklogkyear] column.
      *
      * @param int $v new value
@@ -830,13 +850,13 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
     /**
      * Set the value of [worklogmonth] column.
      *
-     * @param string $v new value
+     * @param int $v new value
      * @return $this|\myAnaliticNonBill The current object (for fluent API support)
      */
     public function setWorkLogMonth($v)
     {
         if ($v !== null) {
-            $v = (string) $v;
+            $v = (int) $v;
         }
 
         if ($this->worklogmonth !== $v) {
@@ -858,7 +878,7 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
     {
         $dt = PropelDateTime::newInstance($v, null, 'DateTime');
         if ($this->worklogdatatime !== null || $dt !== null) {
-            if ($this->worklogdatatime === null || $dt === null || $dt->format("Y-m-d") !== $this->worklogdatatime->format("Y-m-d")) {
+            if ($this->worklogdatatime === null || $dt === null || $dt->format("Y-m-d H:i:s.u") !== $this->worklogdatatime->format("Y-m-d H:i:s.u")) {
                 $this->worklogdatatime = $dt === null ? null : clone $dt;
                 $this->modifiedColumns[myAnaliticNonBillTableMap::COL_WORKLOGDATATIME] = true;
             }
@@ -968,26 +988,6 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
     } // setEstimatedHoursSubTask()
 
     /**
-     * Set the value of [logedhours] column.
-     *
-     * @param double $v new value
-     * @return $this|\myAnaliticNonBill The current object (for fluent API support)
-     */
-    public function setLogedHours($v)
-    {
-        if ($v !== null) {
-            $v = (double) $v;
-        }
-
-        if ($this->logedhours !== $v) {
-            $this->logedhours = $v;
-            $this->modifiedColumns[myAnaliticNonBillTableMap::COL_LOGEDHOURS] = true;
-        }
-
-        return $this;
-    } // setLogedHours()
-
-    /**
      * Set the value of [remaininghours] column.
      *
      * @param double $v new value
@@ -1070,35 +1070,35 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
             $col = $row[TableMap::TYPE_NUM == $indexType ? 8 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogUserName', TableMap::TYPE_PHPNAME, $indexType)];
             $this->worklogusername = (null !== $col) ? (string) $col : null;
 
-            $col = $row[TableMap::TYPE_NUM == $indexType ? 9 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogYear', TableMap::TYPE_PHPNAME, $indexType)];
+            $col = $row[TableMap::TYPE_NUM == $indexType ? 9 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogLogin', TableMap::TYPE_PHPNAME, $indexType)];
+            $this->workloglogin = (null !== $col) ? (string) $col : null;
+
+            $col = $row[TableMap::TYPE_NUM == $indexType ? 10 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogYear', TableMap::TYPE_PHPNAME, $indexType)];
             $this->worklogkyear = (null !== $col) ? (int) $col : null;
 
-            $col = $row[TableMap::TYPE_NUM == $indexType ? 10 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogMonth', TableMap::TYPE_PHPNAME, $indexType)];
-            $this->worklogmonth = (null !== $col) ? (string) $col : null;
+            $col = $row[TableMap::TYPE_NUM == $indexType ? 11 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogMonth', TableMap::TYPE_PHPNAME, $indexType)];
+            $this->worklogmonth = (null !== $col) ? (int) $col : null;
 
-            $col = $row[TableMap::TYPE_NUM == $indexType ? 11 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogDataTime', TableMap::TYPE_PHPNAME, $indexType)];
-            if ($col === '0000-00-00') {
+            $col = $row[TableMap::TYPE_NUM == $indexType ? 12 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogDataTime', TableMap::TYPE_PHPNAME, $indexType)];
+            if ($col === '0000-00-00 00:00:00') {
                 $col = null;
             }
             $this->worklogdatatime = (null !== $col) ? PropelDateTime::newInstance($col, null, 'DateTime') : null;
 
-            $col = $row[TableMap::TYPE_NUM == $indexType ? 12 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogYearMonth', TableMap::TYPE_PHPNAME, $indexType)];
+            $col = $row[TableMap::TYPE_NUM == $indexType ? 13 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogYearMonth', TableMap::TYPE_PHPNAME, $indexType)];
             $this->worklogyearmonth = (null !== $col) ? (string) $col : null;
 
-            $col = $row[TableMap::TYPE_NUM == $indexType ? 13 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogAge', TableMap::TYPE_PHPNAME, $indexType)];
+            $col = $row[TableMap::TYPE_NUM == $indexType ? 14 + $startcol : myAnaliticNonBillTableMap::translateFieldName('WorkLogAge', TableMap::TYPE_PHPNAME, $indexType)];
             $this->worklogage = (null !== $col) ? (int) $col : null;
 
-            $col = $row[TableMap::TYPE_NUM == $indexType ? 14 + $startcol : myAnaliticNonBillTableMap::translateFieldName('CountIssues', TableMap::TYPE_PHPNAME, $indexType)];
+            $col = $row[TableMap::TYPE_NUM == $indexType ? 15 + $startcol : myAnaliticNonBillTableMap::translateFieldName('CountIssues', TableMap::TYPE_PHPNAME, $indexType)];
             $this->countissues = (null !== $col) ? (int) $col : null;
 
-            $col = $row[TableMap::TYPE_NUM == $indexType ? 15 + $startcol : myAnaliticNonBillTableMap::translateFieldName('CountIssuesPersent', TableMap::TYPE_PHPNAME, $indexType)];
+            $col = $row[TableMap::TYPE_NUM == $indexType ? 16 + $startcol : myAnaliticNonBillTableMap::translateFieldName('CountIssuesPersent', TableMap::TYPE_PHPNAME, $indexType)];
             $this->countissuespersent = (null !== $col) ? (double) $col : null;
 
-            $col = $row[TableMap::TYPE_NUM == $indexType ? 16 + $startcol : myAnaliticNonBillTableMap::translateFieldName('EstimatedHoursSubTask', TableMap::TYPE_PHPNAME, $indexType)];
+            $col = $row[TableMap::TYPE_NUM == $indexType ? 17 + $startcol : myAnaliticNonBillTableMap::translateFieldName('EstimatedHoursSubTask', TableMap::TYPE_PHPNAME, $indexType)];
             $this->estimatedhourssubtask = (null !== $col) ? (double) $col : null;
-
-            $col = $row[TableMap::TYPE_NUM == $indexType ? 17 + $startcol : myAnaliticNonBillTableMap::translateFieldName('LogedHours', TableMap::TYPE_PHPNAME, $indexType)];
-            $this->logedhours = (null !== $col) ? (double) $col : null;
 
             $col = $row[TableMap::TYPE_NUM == $indexType ? 18 + $startcol : myAnaliticNonBillTableMap::translateFieldName('RemainingHours', TableMap::TYPE_PHPNAME, $indexType)];
             $this->remaininghours = (null !== $col) ? (double) $col : null;
@@ -1338,6 +1338,9 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
         if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_WORKLOGUSERNAME)) {
             $modifiedColumns[':p' . $index++]  = 'worklogusername';
         }
+        if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_WORKLOGLOGIN)) {
+            $modifiedColumns[':p' . $index++]  = 'workloglogin';
+        }
         if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_WORKLOGKYEAR)) {
             $modifiedColumns[':p' . $index++]  = 'worklogkyear';
         }
@@ -1361,9 +1364,6 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
         }
         if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_ESTIMATEDHOURSSUBTASK)) {
             $modifiedColumns[':p' . $index++]  = 'estimatedhourssubtask';
-        }
-        if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_LOGEDHOURS)) {
-            $modifiedColumns[':p' . $index++]  = 'logedhours';
         }
         if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_REMAININGHOURS)) {
             $modifiedColumns[':p' . $index++]  = 'remaininghours';
@@ -1406,11 +1406,14 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
                     case 'worklogusername':
                         $stmt->bindValue($identifier, $this->worklogusername, PDO::PARAM_STR);
                         break;
+                    case 'workloglogin':
+                        $stmt->bindValue($identifier, $this->workloglogin, PDO::PARAM_STR);
+                        break;
                     case 'worklogkyear':
                         $stmt->bindValue($identifier, $this->worklogkyear, PDO::PARAM_INT);
                         break;
                     case 'worklogmonth':
-                        $stmt->bindValue($identifier, $this->worklogmonth, PDO::PARAM_STR);
+                        $stmt->bindValue($identifier, $this->worklogmonth, PDO::PARAM_INT);
                         break;
                     case 'worklogdatatime':
                         $stmt->bindValue($identifier, $this->worklogdatatime ? $this->worklogdatatime->format("Y-m-d H:i:s.u") : null, PDO::PARAM_STR);
@@ -1429,9 +1432,6 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
                         break;
                     case 'estimatedhourssubtask':
                         $stmt->bindValue($identifier, $this->estimatedhourssubtask, PDO::PARAM_STR);
-                        break;
-                    case 'logedhours':
-                        $stmt->bindValue($identifier, $this->logedhours, PDO::PARAM_STR);
                         break;
                     case 'remaininghours':
                         $stmt->bindValue($identifier, $this->remaininghours, PDO::PARAM_STR);
@@ -1526,31 +1526,31 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
                 return $this->getWorkLogUserName();
                 break;
             case 9:
-                return $this->getWorkLogYear();
+                return $this->getWorkLogLogin();
                 break;
             case 10:
-                return $this->getWorkLogMonth();
+                return $this->getWorkLogYear();
                 break;
             case 11:
-                return $this->getWorkLogDataTime();
+                return $this->getWorkLogMonth();
                 break;
             case 12:
-                return $this->getWorkLogYearMonth();
+                return $this->getWorkLogDataTime();
                 break;
             case 13:
-                return $this->getWorkLogAge();
+                return $this->getWorkLogYearMonth();
                 break;
             case 14:
-                return $this->getCountIssues();
+                return $this->getWorkLogAge();
                 break;
             case 15:
-                return $this->getCountIssuesPersent();
+                return $this->getCountIssues();
                 break;
             case 16:
-                return $this->getEstimatedHoursSubTask();
+                return $this->getCountIssuesPersent();
                 break;
             case 17:
-                return $this->getLogedHours();
+                return $this->getEstimatedHoursSubTask();
                 break;
             case 18:
                 return $this->getRemainingHours();
@@ -1593,19 +1593,19 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
             $keys[6] => $this->getEstimatedHoursSum(),
             $keys[7] => $this->getWorkLogHoursSum(),
             $keys[8] => $this->getWorkLogUserName(),
-            $keys[9] => $this->getWorkLogYear(),
-            $keys[10] => $this->getWorkLogMonth(),
-            $keys[11] => $this->getWorkLogDataTime(),
-            $keys[12] => $this->getWorkLogYearMonth(),
-            $keys[13] => $this->getWorkLogAge(),
-            $keys[14] => $this->getCountIssues(),
-            $keys[15] => $this->getCountIssuesPersent(),
-            $keys[16] => $this->getEstimatedHoursSubTask(),
-            $keys[17] => $this->getLogedHours(),
+            $keys[9] => $this->getWorkLogLogin(),
+            $keys[10] => $this->getWorkLogYear(),
+            $keys[11] => $this->getWorkLogMonth(),
+            $keys[12] => $this->getWorkLogDataTime(),
+            $keys[13] => $this->getWorkLogYearMonth(),
+            $keys[14] => $this->getWorkLogAge(),
+            $keys[15] => $this->getCountIssues(),
+            $keys[16] => $this->getCountIssuesPersent(),
+            $keys[17] => $this->getEstimatedHoursSubTask(),
             $keys[18] => $this->getRemainingHours(),
         );
-        if ($result[$keys[11]] instanceof \DateTime) {
-            $result[$keys[11]] = $result[$keys[11]]->format('c');
+        if ($result[$keys[12]] instanceof \DateTime) {
+            $result[$keys[12]] = $result[$keys[12]]->format('c');
         }
 
         $virtualColumns = $this->virtualColumns;
@@ -1674,31 +1674,31 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
                 $this->setWorkLogUserName($value);
                 break;
             case 9:
-                $this->setWorkLogYear($value);
+                $this->setWorkLogLogin($value);
                 break;
             case 10:
-                $this->setWorkLogMonth($value);
+                $this->setWorkLogYear($value);
                 break;
             case 11:
-                $this->setWorkLogDataTime($value);
+                $this->setWorkLogMonth($value);
                 break;
             case 12:
-                $this->setWorkLogYearMonth($value);
+                $this->setWorkLogDataTime($value);
                 break;
             case 13:
-                $this->setWorkLogAge($value);
+                $this->setWorkLogYearMonth($value);
                 break;
             case 14:
-                $this->setCountIssues($value);
+                $this->setWorkLogAge($value);
                 break;
             case 15:
-                $this->setCountIssuesPersent($value);
+                $this->setCountIssues($value);
                 break;
             case 16:
-                $this->setEstimatedHoursSubTask($value);
+                $this->setCountIssuesPersent($value);
                 break;
             case 17:
-                $this->setLogedHours($value);
+                $this->setEstimatedHoursSubTask($value);
                 break;
             case 18:
                 $this->setRemainingHours($value);
@@ -1757,31 +1757,31 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
             $this->setWorkLogUserName($arr[$keys[8]]);
         }
         if (array_key_exists($keys[9], $arr)) {
-            $this->setWorkLogYear($arr[$keys[9]]);
+            $this->setWorkLogLogin($arr[$keys[9]]);
         }
         if (array_key_exists($keys[10], $arr)) {
-            $this->setWorkLogMonth($arr[$keys[10]]);
+            $this->setWorkLogYear($arr[$keys[10]]);
         }
         if (array_key_exists($keys[11], $arr)) {
-            $this->setWorkLogDataTime($arr[$keys[11]]);
+            $this->setWorkLogMonth($arr[$keys[11]]);
         }
         if (array_key_exists($keys[12], $arr)) {
-            $this->setWorkLogYearMonth($arr[$keys[12]]);
+            $this->setWorkLogDataTime($arr[$keys[12]]);
         }
         if (array_key_exists($keys[13], $arr)) {
-            $this->setWorkLogAge($arr[$keys[13]]);
+            $this->setWorkLogYearMonth($arr[$keys[13]]);
         }
         if (array_key_exists($keys[14], $arr)) {
-            $this->setCountIssues($arr[$keys[14]]);
+            $this->setWorkLogAge($arr[$keys[14]]);
         }
         if (array_key_exists($keys[15], $arr)) {
-            $this->setCountIssuesPersent($arr[$keys[15]]);
+            $this->setCountIssues($arr[$keys[15]]);
         }
         if (array_key_exists($keys[16], $arr)) {
-            $this->setEstimatedHoursSubTask($arr[$keys[16]]);
+            $this->setCountIssuesPersent($arr[$keys[16]]);
         }
         if (array_key_exists($keys[17], $arr)) {
-            $this->setLogedHours($arr[$keys[17]]);
+            $this->setEstimatedHoursSubTask($arr[$keys[17]]);
         }
         if (array_key_exists($keys[18], $arr)) {
             $this->setRemainingHours($arr[$keys[18]]);
@@ -1854,6 +1854,9 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
         if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_WORKLOGUSERNAME)) {
             $criteria->add(myAnaliticNonBillTableMap::COL_WORKLOGUSERNAME, $this->worklogusername);
         }
+        if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_WORKLOGLOGIN)) {
+            $criteria->add(myAnaliticNonBillTableMap::COL_WORKLOGLOGIN, $this->workloglogin);
+        }
         if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_WORKLOGKYEAR)) {
             $criteria->add(myAnaliticNonBillTableMap::COL_WORKLOGKYEAR, $this->worklogkyear);
         }
@@ -1877,9 +1880,6 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
         }
         if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_ESTIMATEDHOURSSUBTASK)) {
             $criteria->add(myAnaliticNonBillTableMap::COL_ESTIMATEDHOURSSUBTASK, $this->estimatedhourssubtask);
-        }
-        if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_LOGEDHOURS)) {
-            $criteria->add(myAnaliticNonBillTableMap::COL_LOGEDHOURS, $this->logedhours);
         }
         if ($this->isColumnModified(myAnaliticNonBillTableMap::COL_REMAININGHOURS)) {
             $criteria->add(myAnaliticNonBillTableMap::COL_REMAININGHOURS, $this->remaininghours);
@@ -1978,6 +1978,7 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
         $copyObj->setEstimatedHoursSum($this->getEstimatedHoursSum());
         $copyObj->setWorkLogHoursSum($this->getWorkLogHoursSum());
         $copyObj->setWorkLogUserName($this->getWorkLogUserName());
+        $copyObj->setWorkLogLogin($this->getWorkLogLogin());
         $copyObj->setWorkLogYear($this->getWorkLogYear());
         $copyObj->setWorkLogMonth($this->getWorkLogMonth());
         $copyObj->setWorkLogDataTime($this->getWorkLogDataTime());
@@ -1986,7 +1987,6 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
         $copyObj->setCountIssues($this->getCountIssues());
         $copyObj->setCountIssuesPersent($this->getCountIssuesPersent());
         $copyObj->setEstimatedHoursSubTask($this->getEstimatedHoursSubTask());
-        $copyObj->setLogedHours($this->getLogedHours());
         $copyObj->setRemainingHours($this->getRemainingHours());
         if ($makeNew) {
             $copyObj->setNew(true);
@@ -2032,6 +2032,7 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
         $this->estimatedhourssum = null;
         $this->workloghourssum = null;
         $this->worklogusername = null;
+        $this->workloglogin = null;
         $this->worklogkyear = null;
         $this->worklogmonth = null;
         $this->worklogdatatime = null;
@@ -2040,7 +2041,6 @@ abstract class myAnaliticNonBill implements ActiveRecordInterface
         $this->countissues = null;
         $this->countissuespersent = null;
         $this->estimatedhourssubtask = null;
-        $this->logedhours = null;
         $this->remaininghours = null;
         $this->alreadyInSave = false;
         $this->clearAllReferences();

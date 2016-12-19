@@ -104,15 +104,15 @@
         <column name="estimatedhourssum" type="double" required="false" phpName="EstimatedHoursSum"/>
         <column name="workloghourssum" type="double" required="false" phpName="WorkLogHoursSum"/>
         <column name="worklogusername" type="varchar" size="128" required="false" phpName="WorkLogUserName"/>
+        <column name="workloglogin" type="varchar" size="128" required="false" phpName="WorkLogLogin"/>
         <column name="worklogkyear" type="integer" required="false" phpName="WorkLogYear"/>
-        <column name="worklogmonth" type="varchar" size="128" required="false" phpName="WorkLogMonth"/>
-        <column name="worklogdatatime" type="date" required="false" phpName="WorkLogDataTime"/>
+        <column name="worklogmonth" type="integer" required="false" phpName="WorkLogMonth"/>
+        <column name="worklogdatatime" type="TIMESTAMP" required="false" phpName="WorkLogDataTime"/>
         <column name="worklogyearmonth" type="varchar" size="128" required="false" phpName="WorkLogYearMonth"/>
         <column name="worklogage" type="integer" required="false" phpName="WorkLogAge"/>
         <column name="countissues" type="integer" required="false" phpName="CountIssues"/>
         <column name="countissuespersent" type="double" required="false" phpName="CountIssuesPersent"/>
         <column name="estimatedhourssubtask" type="double" required="false" phpName="EstimatedHoursSubTask"/>
-        <column name="logedhours" type="double" required="false" phpName="LogedHours"/>
         <column name="remaininghours" type="double" required="false" phpName="RemainingHours"/>
     </table>
     <table name="myanaliticnonbill" phpName="myAnaliticNonBill">
@@ -125,15 +125,15 @@
         <column name="estimatedhourssum" type="double" required="false" phpName="EstimatedHoursSum"/>
         <column name="workloghourssum" type="double" required="false" phpName="WorkLogHoursSum"/>
         <column name="worklogusername" type="varchar" size="128" required="false" phpName="WorkLogUserName"/>
+        <column name="workloglogin" type="varchar" size="128" required="false" phpName="WorkLogLogin"/>
         <column name="worklogkyear" type="integer" required="false" phpName="WorkLogYear"/>
-        <column name="worklogmonth" type="varchar" size="128" required="false" phpName="WorkLogMonth"/>
-        <column name="worklogdatatime" type="date" required="false" phpName="WorkLogDataTime"/>
+        <column name="worklogmonth" type="integer" required="false" phpName="WorkLogMonth"/>
+        <column name="worklogdatatime" type="TIMESTAMP" required="false" phpName="WorkLogDataTime"/>
         <column name="worklogyearmonth" type="varchar" size="128" required="false" phpName="WorkLogYearMonth"/>
         <column name="worklogage" type="integer" required="false" phpName="WorkLogAge"/>
         <column name="countissues" type="integer" required="false" phpName="CountIssues"/>
         <column name="countissuespersent" type="double" required="false" phpName="CountIssuesPersent"/>
         <column name="estimatedhourssubtask" type="double" required="false" phpName="EstimatedHoursSubTask"/>
-        <column name="logedhours" type="double" required="false" phpName="LogedHours"/>
         <column name="remaininghours" type="double" required="false" phpName="RemainingHours"/>
     </table>
 </database>
