@@ -9,7 +9,7 @@ return [
                     'classname'  => 'Propel\Runtime\Connection\ConnectionWrapper',
                     'dsn'        => 'mysql:host=board.intersog.com;dbname=data',
                     'user'       => 'root',
-                    'password'   => 'system021080',
+                    'password'   => '',
                     'attributes' => []
                 ]
             ]
